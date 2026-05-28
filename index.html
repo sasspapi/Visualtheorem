@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Visual Theorem — Creative Production Studio</title>
+<style>
+
+/* ── GOLDEN RATIO TYPE SCALE (1.618) base 16px ──
+   P:  16px / 1rem
+   H6: 25.89px / 1.618rem
+   H5: 41.89px / 2.618rem
+   H4: 67.77px / 4.236rem
+   H3: 109.66px / 6.854rem
+   H2: 177.42px / 11.089rem
+   H1: 287.07px / 17.942rem
+*/
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black:   #080808;
+  --white:   #F7F7F5;
+  --off:     #EFEFEC;
+  --mid:     #86867F;
+  --faint:   #C4C4BF;
+  --border:  rgba(8,8,8,0.09);
+  --border-w:rgba(247,247,245,0.08);
+
+  /* Golden ratio scale */
+  --p:   1rem;        /* 16px */
+  --h6:  1.618rem;    /* 25.89px */
+  --h5:  2.618rem;    /* 41.89px */
+  --h4:  4.236rem;    /* 67.77px */
+  --h3:  6.854rem;    /* 109.66px */
+  --h2:  11.089rem;   /* 177.42px */
+  --h1:  17.942rem;   /* 287.07px */
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: var(--white);
+  color: var(--black);
+  font-weight: 300;
+  font-size: var(--p);
+  line-height: 1.618; /* golden ratio line height */
+}
+
+/* ── CURSOR ── */
+.cursor {
+  width: 7px; height: 7px; background: var(--black);
+  border-radius: 50%; position: fixed; pointer-events: none;
+  z-index: 9999; transform: translate(-50%,-50%);
+  transition: width 0.25s, height 0.25s, background 0.25s, border 0.25s;
+}
+.cursor.expand { width: 44px; height: 44px; background: transparent; border: 1px solid var(--black); }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 48px;
+  background: rgba(247,247,245,0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--h6); font-weight: 700; letter-spacing: 0.06em;
+  color: var(--black); text-decoration: none; text-transform: uppercase;
+}
+.nav-right { display: flex; align-items: center; gap: 40px; }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  text-decoration: none; color: var(--mid);
+  font-size: var(--p); font-weight: 400;
+  letter-spacing: 0.14em; text-transform: uppercase; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--black); }
+.nav-cta {
+  font-size: var(--p); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500;
+  color: var(--white); background: var(--black);
+  padding: 10px 24px; text-decoration: none; transition: opacity 0.2s;
+}
+.nav-cta:hover { opacity: 0.7; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 58% 42%;
+  border-bottom: 1px solid var(--border); padding-top: 78px;
+}
+.hero-left {
+  padding: 80px 48px 64px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  border-right: 1px solid var(--border);
+}
+.hero-tag {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--mid); font-weight: 400;
+}
+.hero-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(4rem, 8vw, var(--h2));
+  line-height: 0.95; font-weight: 400; color: var(--black);
+}
+.hero-title em { font-style: italic; }
+.hero-foot {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  padding-top: 40px; border-top: 1px solid var(--border); gap: 40px;
+}
+.hero-statement {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: var(--h6); font-weight: 400; line-height: 1.618;
+  color: var(--mid); max-width: 320px; font-style: italic;
+}
+.hero-note {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--faint); text-align: right; line-height: 1.618; flex-shrink: 0;
+}
+.hero-right {
+  background: var(--black); position: relative; overflow: hidden; min-height: 100%;
+}
+.hero-right img {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: center; opacity: 0.9;
+  transition: transform 0.8s ease;
+}
+.hero-right:hover img { transform: scale(1.03); }
+
+/* ── PHILOSOPHY BAND ── */
+.philosophy {
+  background: var(--black); color: var(--white);
+  padding: 80px 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.philosophy-inner {
+  display: grid; grid-template-columns: 200px 1fr; gap: 80px; align-items: start;
+}
+.philosophy-label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.25); padding-top: 8px;
+}
+.philosophy-text {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(1.618rem, 3vw, var(--h4));
+  font-weight: 400; line-height: 1.35; color: var(--white);
+}
+.philosophy-text em { font-style: italic; color: rgba(255,255,255,0.45); }
+
+/* ── MARQUEE ── */
+.marquee-strip {
+  background: var(--off); padding: 15px 0;
+  overflow: hidden; white-space: nowrap;
+  border-bottom: 1px solid var(--border);
+}
+.marquee-inner { display: inline-block; animation: scroll-left 32s linear infinite; }
+.marquee-inner span {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--faint); padding: 0 36px;
+}
+.marquee-inner span.sep { color: var(--black); padding: 0 8px; font-size: 0.5rem; }
+@keyframes scroll-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── SHARED SECTION HEADERS ── */
+.sec-eyebrow {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--mid); margin-bottom: 14px;
+}
+.sec-eyebrow-w { color: rgba(255,255,255,0.25); margin-bottom: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.2em; text-transform: uppercase; }
+.sec-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(3rem, 7vw, var(--h3));
+  line-height: 0.9; font-weight: 400; color: var(--black);
+}
+.sec-title-w {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(3rem, 7vw, var(--h3));
+  line-height: 0.9; font-weight: 400; color: var(--white);
+}
+
+/* ── WORK ── */
+#work { background: var(--white); }
+.work-header {
+  padding: 72px 48px 40px;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  border-bottom: 1px solid var(--border);
+}
+.work-aside {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: var(--h6); color: var(--mid);
+  max-width: 260px; line-height: 1.618; text-align: right; font-style: italic;
+}
+.work-grid { display: grid; grid-template-columns: repeat(12, 1fr); }
+.wi {
+  position: relative; overflow: hidden; cursor: pointer;
+  border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.wi-1 { grid-column: span 7; aspect-ratio: 16/10; }
+.wi-2 { grid-column: span 5; aspect-ratio: 4/5; border-right: none; }
+.wi-3 { grid-column: span 5; aspect-ratio: 4/5; border-bottom: none; }
+.wi-4 { grid-column: span 7; aspect-ratio: 16/10; border-right: none; border-bottom: none; }
+.wi img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s ease; display: block; }
+.wi:hover img { transform: scale(1.04); }
+.wi:hover .wo { opacity: 1; }
+.wo {
+  position: absolute; inset: 0; opacity: 0;
+  background: rgba(0,0,0,0.62);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 32px; transition: opacity 0.35s;
+}
+.wo-tag {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4); margin-bottom: 8px;
+}
+.wo-name {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: var(--h5); font-weight: 400; color: #fff; line-height: 1.2;
+}
+
+/* ── HOW WE WORK ── */
+#howwework { background: var(--black); }
+.nfe-band { padding: 0 48px; border-bottom: 1px solid rgba(255,255,255,0.06); display: grid; grid-template-columns: 1fr 1fr; }
+.nfe-left { padding: 80px 60px 80px 0; border-right: 1px solid rgba(255,255,255,0.06); }
+.nfe-label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.2); margin-bottom: 28px;
+}
+.nfe-heading {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(3rem, 6vw, var(--h3));
+  line-height: 0.95; color: var(--white); margin-bottom: 36px;
+}
+.nfe-body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--h6); line-height: 1.618; color: rgba(255,255,255,0.38);
+}
+.nfe-body strong { color: rgba(255,255,255,0.7); font-weight: 500; }
+.nfe-right { padding: 80px 0 80px 60px; display: flex; flex-direction: column; justify-content: space-between; }
+.nfe-criteria-label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.26em; text-transform: uppercase;
+  color: rgba(255,255,255,0.18); margin-bottom: 32px;
+}
+.nfe-criteria { list-style: none; }
+.nfe-criteria li {
+  padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: flex-start; gap: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--h6); color: rgba(255,255,255,0.45); line-height: 1.618;
+}
+.nfe-criteria li::before { content: '—'; color: rgba(255,255,255,0.18); flex-shrink: 0; margin-top: 2px; }
+.nfe-criteria li:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
+.nfe-cta {
+  margin-top: 48px; display: inline-block;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500;
+  color: var(--white); text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 3px; transition: border-color 0.2s;
+}
+.nfe-cta:hover { border-color: var(--white); }
+
+/* ── SERVICES ── */
+#services { background: var(--black); }
+.services-top {
+  padding: 72px 48px 48px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end;
+  border-bottom: 1px solid var(--border-w);
+}
+.services-aside {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: var(--h6); line-height: 1.618; color: rgba(255,255,255,0.32);
+  font-style: italic; align-self: end;
+}
+.svc-list { padding: 0 48px 72px; }
+.svc {
+  display: grid; grid-template-columns: 52px 1fr 240px;
+  align-items: center; gap: 40px;
+  padding: 34px 0; border-bottom: 1px solid var(--border-w);
+  transition: padding-left 0.3s; cursor: default;
+}
+.svc:hover { padding-left: 14px; }
+.svc:hover .svc-name { color: rgba(255,255,255,0.45); }
+.svc-n {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.1em; color: rgba(255,255,255,0.18);
+}
+.svc-name {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(1.618rem, 2.8vw, var(--h4)); font-weight: 400;
+  color: var(--white); transition: color 0.3s;
+}
+.svc-desc {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); color: rgba(255,255,255,0.26); line-height: 1.618; text-align: right;
+}
+
+/* ── CLIENTS — dual opposing marquee ── */
+#clients { background: var(--off); overflow: hidden; }
+.clients-top { padding: 72px 48px 60px; border-bottom: 1px solid var(--border); }
+.clients-marquee-wrap {
+  display: flex; flex-direction: column;
+}
+.clients-row {
+  overflow: hidden; white-space: nowrap;
+  padding: 28px 0; border-bottom: 1px solid var(--border);
+}
+.clients-row:last-child { border-bottom: none; }
+.clients-track {
+  display: inline-block;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.clients-track.ltr { animation-name: clients-ltr; animation-duration: 42s; }
+.clients-track.rtl { animation-name: clients-rtl; animation-duration: 36s; }
+
+@keyframes clients-ltr {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes clients-rtl {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.client-item {
+  display: inline-flex; align-items: center; gap: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: var(--h5); font-weight: 400; letter-spacing: 0.02em;
+  color: var(--mid); padding: 0 44px;
+  cursor: default; transition: color 0.25s;
+}
+.client-item:hover { color: var(--black); }
+.client-sep {
+  display: inline-block; width: 5px; height: 5px;
+  border-radius: 50%; background: var(--faint);
+  margin: 0 44px; vertical-align: middle; flex-shrink: 0;
+}
+
+/* ── TEAM ── */
+#team { background: var(--white); }
+.team-top { padding: 72px 48px 40px; border-bottom: 1px solid var(--border); }
+.team-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.tc { border-right: 1px solid var(--border); }
+.tc:last-child { border-right: none; }
+.tc-photo {
+  width: 100%; aspect-ratio: 3/2; background: var(--black);
+  position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+}
+.tc-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.tc-mono {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: var(--h1); color: rgba(255,255,255,0.04); letter-spacing: 0.04em;
+}
+.tc-hint {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 12px 32px; background: rgba(0,0,0,0.35);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.22);
+}
+.tc-info { padding: 44px 48px; }
+.tc-name {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: var(--h3); line-height: 1; margin-bottom: 5px;
+}
+.tc-role {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--mid); margin-bottom: 22px;
+}
+.tc-bio {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--h6); line-height: 1.618; color: var(--mid);
+}
+
+/* ── CONTACT ── */
+#contact { background: var(--black); }
+.contact-top { padding: 72px 48px 40px; border-bottom: 1px solid var(--border-w); }
+.contact-sub {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: var(--h5); font-style: italic;
+  color: rgba(255,255,255,0.28); margin-top: 14px; line-height: 1.618;
+}
+.contact-body { display: grid; grid-template-columns: 1fr 1fr; }
+.cl { padding: 60px 48px; border-right: 1px solid var(--border-w); }
+.cd { margin-bottom: 34px; }
+.cd-lbl {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.24em; text-transform: uppercase;
+  color: rgba(255,255,255,0.22); margin-bottom: 8px;
+}
+.cd-val {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: var(--h5); font-weight: 400; color: var(--white); line-height: 1.45;
+}
+.c-quote {
+  margin-top: 52px; padding-top: 36px; border-top: 1px solid var(--border-w);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: var(--h5); font-weight: 400; line-height: 1.618;
+  color: rgba(255,255,255,0.35); font-style: italic;
+}
+.cr { padding: 60px 48px; }
+.ff { margin-bottom: 28px; }
+.fl {
+  display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(255,255,255,0.22); margin-bottom: 10px;
+}
+.fi {
+  width: 100%; background: transparent;
+  border: none; border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 0; font-family: 'Times New Roman', Times, serif;
+  font-size: var(--h6); color: var(--white); outline: none;
+  transition: border-color 0.2s; appearance: none;
+}
+.fi::placeholder { color: rgba(255,255,255,0.18); }
+.fi:focus { border-color: rgba(255,255,255,0.4); }
+.fi option { background: #111; }
+textarea.fi { resize: none; height: 88px; }
+.fsub {
+  background: var(--white); color: var(--black); border: none; padding: 15px 48px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500;
+  cursor: pointer; transition: opacity 0.2s; margin-top: 6px;
+}
+.fsub:hover { opacity: 0.7; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--black); border-top: 1px solid var(--border-w);
+  padding: 30px 48px;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+}
+.fl-logo {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--h6); font-weight: 700; letter-spacing: 0.14em; color: var(--white);
+  text-transform: uppercase;
+}
+.fl-copy {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.06em; color: rgba(255,255,255,0.18); text-align: center;
+}
+.fl-soc { display: flex; gap: 26px; justify-content: flex-end; }
+.fl-soc a {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--p); letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.28); text-decoration: none; transition: color 0.2s;
+}
+.fl-soc a:hover { color: var(--white); }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Visual Theorem</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Studio</a></li>
+      <li><a href="#clients">Clients</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Work With Us</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Visual Theorem &nbsp;·&nbsp; Est. 2013</div>
+    <h1 class="hero-title">
+      We work with<br>brands we<br><em>believe in.</em>
+    </h1>
+    <div class="hero-foot">
+      <p class="hero-statement">"The best work we've ever made happened because someone trusted us completely."</p>
+      <div class="hero-note">India &nbsp;·&nbsp; UK &nbsp;·&nbsp; Middle East<br>A small studio. A selective roster.</div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="vt_hero.jpg" alt="Visual Theorem — on set production" />
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<div class="philosophy">
+  <div class="philosophy-inner">
+    <div class="philosophy-label">Our Philosophy</div>
+    <p class="philosophy-text">
+      Over 100 campaigns. A decade of production. We've never once made something that blended in — <em>and we're not about to start.</em>
+    </p>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span>Campaign Direction</span><span class="sep">◆</span>
+    <span>Brand Films</span><span class="sep">◆</span>
+    <span>Content Production</span><span class="sep">◆</span>
+    <span>Photography &amp; Editorial</span><span class="sep">◆</span>
+    <span>Post-Production</span><span class="sep">◆</span>
+    <span>Visual Storytelling</span><span class="sep">◆</span>
+    <span>Campaign Direction</span><span class="sep">◆</span>
+    <span>Brand Films</span><span class="sep">◆</span>
+    <span>Content Production</span><span class="sep">◆</span>
+    <span>Photography &amp; Editorial</span><span class="sep">◆</span>
+    <span>Post-Production</span><span class="sep">◆</span>
+    <span>Visual Storytelling</span><span class="sep">◆</span>
+  </div>
+</div>
+
+<!-- WORK -->
+<section id="work">
+  <div class="work-header">
+    <div>
+      <div class="sec-eyebrow">Selected Work</div>
+      <h2 class="sec-title">The Work<br>We're Proud Of</h2>
+    </div>
+    <p class="work-aside">A small selection. The full picture is a conversation.</p>
+  </div>
+  <div class="work-grid">
+
+    <!-- Fastrack — large left -->
+    <div class="wi wi-1">
+      <img src="vt_watch_blue.jpg" alt="Fastrack — Campaign Photoshoot" />
+      <div class="wo">
+        <div class="wo-tag">Fashion &amp; Lifestyle · Photography</div>
+        <div class="wo-name">Fastrack<br>Campaign Photoshoot</div>
+      </div>
+    </div>
+
+    <!-- J.Oppmann Privat — right portrait -->
+    <div class="wi wi-2">
+      <img src="vt_wine_privat.jpg" alt="J.Oppmann Sparkling Wine Campaign" />
+      <div class="wo">
+        <div class="wo-tag">Luxury &amp; Lifestyle · Photography</div>
+        <div class="wo-name">J.Oppmann<br>Sparkling Wine Campaign</div>
+      </div>
+    </div>
+
+    <!-- Becksteiner Süss Rot — left portrait -->
+    <div class="wi wi-3">
+      <img src="vt_wine_rot.jpg" alt="Becksteiner Winzer Campaign" />
+      <div class="wo">
+        <div class="wo-tag">Lifestyle · Product Photography</div>
+        <div class="wo-name">Becksteiner Winzer<br>Süss Rot Campaign</div>
+      </div>
+    </div>
+
+    <!-- Hero / BTS large right -->
+    <div class="wi wi-4">
+      <img src="vt_hero.jpg" alt="Campaign Production — Military Academy" />
+      <div class="wo">
+        <div class="wo-tag">Campaign Direction · Production</div>
+        <div class="wo-name">Large Scale<br>Campaign Production</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section id="howwework">
+  <div class="nfe-band">
+    <div class="nfe-left">
+      <div class="nfe-label">How We Work</div>
+      <h2 class="nfe-heading">A few<br>great projects.<br>Done well.</h2>
+      <p class="nfe-body">
+        We're a small studio, and we like it that way.<br><br>
+        We take on a handful of projects each year — not because we're turning people away, but because <strong>every client we work with gets our full attention.</strong> No handoffs. No juniors running the show. Just us, fully invested in making something we're all proud of.<br><br>
+        If that sounds like what you're looking for, we'd love to hear from you.
+      </p>
+    </div>
+    <div class="nfe-right">
+      <div>
+        <div class="nfe-criteria-label">We do our best work with brands that</div>
+        <ul class="nfe-criteria">
+          <li>Have a clear sense of who they are and aren't afraid to show it</li>
+          <li>Value the process as much as the outcome — great work takes time and trust</li>
+          <li>Want a genuine creative partnership, not just a vendor relationship</li>
+          <li>Are building something they believe in, and want the world to see it that way too</li>
+        </ul>
+      </div>
+      <a href="#contact" class="nfe-cta">Sound like you? Let's talk →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-top">
+    <div>
+      <div class="sec-eyebrow-w">What We Do</div>
+      <h2 class="sec-title-w">How We<br>Show Up</h2>
+    </div>
+    <p class="services-aside">We shape every engagement around what the work actually needs — not a fixed package, but a genuine conversation about what will make the biggest difference.</p>
+  </div>
+  <div class="svc-list">
+    <div class="svc"><div class="svc-n">01</div><div class="svc-name">Campaign Direction</div><div class="svc-desc">Concept, art direction &amp; end-to-end production</div></div>
+    <div class="svc"><div class="svc-n">02</div><div class="svc-name">Brand Films &amp; TVCs</div><div class="svc-desc">Narrative-led films, commercials &amp; branded content</div></div>
+    <div class="svc"><div class="svc-n">03</div><div class="svc-name">Content Production</div><div class="svc-desc">Digital, social &amp; platform-first storytelling</div></div>
+    <div class="svc"><div class="svc-n">04</div><div class="svc-name">Photography &amp; Editorial</div><div class="svc-desc">Fashion, product &amp; lifestyle photography</div></div>
+    <div class="svc"><div class="svc-n">05</div><div class="svc-name">Post-Production</div><div class="svc-desc">Colour grading, VFX, editing &amp; finishing</div></div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section id="clients">
+  <div class="clients-top">
+    <div class="sec-eyebrow">The Roster</div>
+    <h2 class="sec-title">Brands That<br>Trusted Us</h2>
+  </div>
+
+  <div class="clients-marquee-wrap">
+
+    <!-- ROW 1 — left to right -->
+    <div class="clients-row">
+      <div class="clients-track ltr">
+        <span class="client-item">Toyota</span><span class="client-sep"></span>
+        <span class="client-item">Infosys</span><span class="client-sep"></span>
+        <span class="client-item">Tata Cliq Luxury</span><span class="client-sep"></span>
+        <span class="client-item">Indian Terrain</span><span class="client-sep"></span>
+        <span class="client-item">Reliance Trends</span><span class="client-sep"></span>
+        <span class="client-item">TVS Motors</span><span class="client-sep"></span>
+        <span class="client-item">Schneider Electric</span><span class="client-sep"></span>
+        <span class="client-item">POCO</span><span class="client-sep"></span>
+        <span class="client-item">Unacademy</span><span class="client-sep"></span>
+        <!-- duplicate for seamless loop -->
+        <span class="client-item">Toyota</span><span class="client-sep"></span>
+        <span class="client-item">Infosys</span><span class="client-sep"></span>
+        <span class="client-item">Tata Cliq Luxury</span><span class="client-sep"></span>
+        <span class="client-item">Indian Terrain</span><span class="client-sep"></span>
+        <span class="client-item">Reliance Trends</span><span class="client-sep"></span>
+        <span class="client-item">TVS Motors</span><span class="client-sep"></span>
+        <span class="client-item">Schneider Electric</span><span class="client-sep"></span>
+        <span class="client-item">POCO</span><span class="client-sep"></span>
+        <span class="client-item">Unacademy</span><span class="client-sep"></span>
+      </div>
+    </div>
+
+    <!-- ROW 2 — right to left -->
+    <div class="clients-row">
+      <div class="clients-track rtl">
+        <span class="client-item">Axis Bank</span><span class="client-sep"></span>
+        <span class="client-item">Peter England</span><span class="client-sep"></span>
+        <span class="client-item">Blockwiz</span><span class="client-sep"></span>
+        <span class="client-item">JSW</span><span class="client-sep"></span>
+        <span class="client-item">OLA</span><span class="client-sep"></span>
+        <span class="client-item">Epson</span><span class="client-sep"></span>
+        <span class="client-item">Unilever</span><span class="client-sep"></span>
+        <span class="client-item">Honda</span><span class="client-sep"></span>
+        <span class="client-item">ICICI Bank</span><span class="client-sep"></span>
+        <!-- duplicate for seamless loop -->
+        <span class="client-item">Axis Bank</span><span class="client-sep"></span>
+        <span class="client-item">Peter England</span><span class="client-sep"></span>
+        <span class="client-item">Blockwiz</span><span class="client-sep"></span>
+        <span class="client-item">JSW</span><span class="client-sep"></span>
+        <span class="client-item">OLA</span><span class="client-sep"></span>
+        <span class="client-item">Epson</span><span class="client-sep"></span>
+        <span class="client-item">Unilever</span><span class="client-sep"></span>
+        <span class="client-item">Honda</span><span class="client-sep"></span>
+        <span class="client-item">ICICI Bank</span><span class="client-sep"></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="team-top">
+    <div class="sec-eyebrow">The Studio</div>
+    <h2 class="sec-title">Small Team.<br>Serious Work.</h2>
+  </div>
+  <div class="team-grid">
+    <div class="tc">
+      <div class="tc-photo">
+        <img src="arun.png" alt="Arun Vijay" />
+      </div>
+      <div class="tc-info">
+        <div class="tc-name">Arun Vijay</div>
+        <div class="tc-role">Creative Producer &amp; Visual Storyteller</div>
+        <p class="tc-bio">Over a decade. More than 100 campaigns. Brands like Toyota, Infosys, Tata, and Reliance. Arun doesn't just direct — he builds the visual world a brand needs to exist in. Fluent in nine languages and endlessly curious, he brings an instinct for culture, timing, and beauty that no brief can fully contain.</p>
+      </div>
+    </div>
+    <div class="tc">
+      <div class="tc-photo">
+        <div class="tc-mono">H</div>
+        <div class="tc-hint">Add portrait photo here</div>
+      </div>
+      <div class="tc-info">
+        <div class="tc-name">Harthika</div>
+        <div class="tc-role">Production Partner</div>
+        <p class="tc-bio"><!-- Add Harthika's bio here --></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-top">
+    <div class="sec-eyebrow-w">Work With Us</div>
+    <h2 class="sec-title-w">Let's Make<br>Something Good.</h2>
+    <p class="contact-sub">If you're looking to strengthen your brand's digital presence, reach new audiences, and make a real impression in the digital space — we should talk.</p>
+  </div>
+  <div class="contact-body">
+    <div class="cl">
+      <div class="cd"><div class="cd-lbl">New Business</div><div class="cd-val">arun@visualtheorem.com</div></div>
+      <div class="cd"><div class="cd-lbl">General Enquiries</div><div class="cd-val">sayhello@visualtheorem.com</div></div>
+      <div class="cd"><div class="cd-lbl">Based In</div><div class="cd-val">India · United Kingdom<br>Middle East</div></div>
+      <div class="cd"><div class="cd-lbl">Availability</div><div class="cd-val">Accepting select briefs — 2025</div></div>
+      <div class="c-quote">"Every project we take on, we treat like it's the only one. Because for that client, it is."</div>
+    </div>
+    <div class="cr">
+      <form action="mailto:arun@visualtheorem.com" method="POST" enctype="text/plain">
+        <div class="ff"><label class="fl">Your Name</label><input class="fi" type="text" name="name" placeholder="Full name" required /></div>
+        <div class="ff"><label class="fl">Email Address</label><input class="fi" type="email" name="email" placeholder="your@email.com" required /></div>
+        <div class="ff"><label class="fl">Your Brand / Company</label><input class="fi" type="text" name="brand" placeholder="Where do you work?" /></div>
+        <div class="ff">
+          <label class="fl">What Do You Need?</label>
+          <select class="fi" name="service">
+            <option value="">— Select a service —</option>
+            <option>Campaign Direction</option>
+            <option>Brand Film &amp; TVC</option>
+            <option>Content Production</option>
+            <option>Photography &amp; Editorial</option>
+            <option>Post-Production</option>
+          </select>
+        </div>
+        <div class="ff"><label class="fl">Tell Us About Your Brand &amp; Project</label><textarea class="fi" name="message" placeholder="Tell us about your brand, your project, and what great looks like to you."></textarea></div>
+        <button type="submit" class="fsub">Let's Talk →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl-logo">Visual Theorem</div>
+  <div class="fl-copy">© 2026 Visual Theorem. All rights reserved.</div>
+  <div class="fl-soc">
+    <a href="https://instagram.com/visualtheorem" target="_blank">Instagram</a>
+    <a href="https://vimeo.com" target="_blank">Vimeo</a>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    <a href="https://youtube.com" target="_blank">YouTube</a>
+  </div>
+</footer>
+
+<script>
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+  });
+  document.querySelectorAll('a, button, .wi, .svc, .cc').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('expand'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('expand'));
+  });
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.07 });
+
+  document.querySelectorAll('.tc, .svc, .nfe-criteria li, .cd, .wi, .philosophy-text').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(28px)';
+    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>
