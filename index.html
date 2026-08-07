@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  body { margin: 0; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #1B2A4A; }
+  ::selection { background: rgba(15,15,15,0.12); }
+  @keyframes vt-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes vt-scroll-rev { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #FFFFFF; color: #0F0F0F; font-weight: 300; font-size: 16px; line-height: 1.6;">
+
+  <nav style="position: sticky; top: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 18px max(48px, 5vw); background: rgba(255,255,255,0.94); backdrop-filter: blur(16px); border-bottom: 1px solid #E2E5EC;">
+    <img src="./visualtheorem_logo-ms3qhpgh-iu6x.svg" alt="Visual Theorem" style="height: 20px; width: auto; display: block;">
+    <div style="display: flex; align-items: center; gap: 40px;">
+      <div style="display: flex; gap: 32px;">
+        <a href="#work" style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: #6B7280;" style-hover="color: #1B2A4A;">Work</a>
+        <a href="#services" style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: #6B7280;" style-hover="color: #1B2A4A;">Services</a>
+        <a href="#team" style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: #6B7280;" style-hover="color: #1B2A4A;">Studio</a>
+        <a href="#clients" style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: #6B7280;" style-hover="color: #1B2A4A;">Clients</a>
+      </div>
+      <a href="#contact" style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: #FFFFFF; background: #1B2A4A; padding: 10px 24px;" style-hover="opacity: 0.8;">Work With Us</a>
+    </div>
+  </nav>
+
+  <section style="min-height: 100vh; display: grid; grid-template-columns: 58% 42%; border-bottom: 1px solid #E2E5EC;">
+    <div style="padding: 80px max(48px, 5vw) 64px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid #E2E5EC;">
+      <div style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: #6B7280;">Visual Theorem &nbsp;·&nbsp; Made By People Who Notice Things</div>
+      <h1 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(64px, 8vw, 287px); line-height: 0.92; letter-spacing: 0.005em; margin: 0;">
+        Storytelling<br><em style="font-style: italic;">is everything.</em>
+      </h1>
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; padding-top: 40px; border-top: 1px solid #E2E5EC; gap: 40px; flex-wrap: wrap;">
+        <p style="font-family: 'Times New Roman', Times, serif; font-size: 18px; font-weight: 400; font-style: italic; line-height: 1.65; color: #6B7280; max-width: 320px; margin: 0;">"We think in frames the way a painter thinks in brushstrokes, and a writer in sentences."</p>
+        <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: #6B7280; text-align: right; line-height: 1.8;">
+          India &nbsp;·&nbsp; United Kingdom &nbsp;·&nbsp; Middle East
+        </div>
+      </div>
+    </div>
+    <div style="background: #0F0F0F; position: relative; overflow: hidden;">
+      <img src="./assets/hero-bts-crane.jpg" alt="On set" style="position: absolute; inset: 0; object-fit: scale-down; width: 845px; top: -60px; left: -1px; height: 932px">
+    </div>
+  </section>
+
+  <div style="background: #F6F7F9; padding: 15px 0; overflow: hidden; white-space: nowrap; border-bottom: 1px solid #E2E5EC;">
+    <div style="display: inline-block; animation: vt-scroll 32s linear infinite;">
+      <sc-for list="{{ statsMarquee }}" as="stat" hint-placeholder-count="4">
+        <span style="font-family: 'Times New Roman', Times, serif; font-size: 13px; letter-spacing: 0.1em; color: #6B7280; padding: 0 36px;">{{ stat }}</span>
+      </sc-for>
+    </div>
+  </div>
+
+  <section id="work" style="background: #FFFFFF;">
+    <div style="padding: 72px max(48px, 5vw) 40px; display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px solid #E2E5EC; gap: 24px; flex-wrap: wrap;">
+      <div>
+        <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; color: #6B7280; margin-bottom: 14px;">A Small Archive</div>
+        <h2 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(44px, 6vw, 110px); line-height: 0.9; letter-spacing: 0.005em; margin: 0;">Crumbs Make<br>A Loaf</h2>
+      </div>
+      <p style="font-size: 13px; color: #6B7280; max-width: 260px; line-height: 1.8; text-align: right; margin: 0;">A handful of projects we still think about.</p>
+    </div>
+    <div style="padding: 32px 0; overflow: hidden; white-space: nowrap;">
+      <div style="display: inline-block; animation: vt-scroll 42s linear infinite;">
+        <sc-for list="{{ workRow1 }}" as="w" hint-placeholder-count="8">
+          <div style="display: inline-block; width: 340px; margin-right: 24px; vertical-align: top; white-space: normal;">
+            <div style="width: 340px; aspect-ratio: 4/5; position: relative; overflow: hidden; background: #F6F7F9;">
+              <sc-if value="{{ w.img }}" hint-placeholder-val="{{ false }}">
+                <img src="{{ w.img }}" alt="{{ w.name }}" style="width: 100%; height: 100%; object-fit: cover; object-position: {{ w.objectPosition }};">
+              </sc-if>
+              <sc-if value="{{ w.placeholder }}" hint-placeholder-val="{{ true }}">
+                <image-slot id="{{ w.slotId }}" shape="rect" placeholder="{{ w.placeholderText }}"></image-slot>
+              </sc-if>
+              <sc-if value="{{ w.isVideo }}" hint-placeholder-val="{{ false }}">
+                <div onClick="{{ w.pickVideo }}" onDragOver="{{ preventDefault }}" onDrop="{{ w.dropVideo }}" style="width: 100%; height: 100%; position: relative; cursor: pointer; border: 1px dashed #E2E5EC; box-sizing: border-box; overflow: hidden;">
+                  <sc-if value="{{ w.videoSrc }}" hint-placeholder-val="{{ false }}">
+                    <video src="{{ w.videoSrc }}" loop="" playsinline="" controls="" style="width: 100%; height: 100%; object-fit: cover;"></video>
+                  </sc-if>
+                  <sc-if value="{{ w.videoSrcMissing }}" hint-placeholder-val="{{ true }}">
+                    <div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
+                      <div style="width: 46px; height: 46px; border-radius: 50%; border: 1px solid #6B7280; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #6B7280;">►</div>
+                      <div style="font-size: 11px; color: #6B7280; letter-spacing: 0.05em; text-align: center; padding: 0 20px;">{{ w.name }}</div>
+                      <div style="font-size: 10px; color: #6B7280; letter-spacing: 0.05em;">Click or drop a video</div>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="padding: 0 0 32px; overflow: hidden; white-space: nowrap;">
+      <div style="display: inline-block; animation: vt-scroll-rev 42s linear infinite;">
+        <sc-for list="{{ workRow2 }}" as="w" hint-placeholder-count="8">
+          <div style="display: inline-block; width: 340px; margin-right: 24px; vertical-align: top; white-space: normal;">
+            <div style="width: 340px; aspect-ratio: 4/5; position: relative; overflow: hidden; background: #F6F7F9;">
+              <sc-if value="{{ w.img }}" hint-placeholder-val="{{ false }}">
+                <img src="{{ w.img }}" alt="{{ w.name }}" style="width: 100%; height: 100%; object-fit: cover; object-position: {{ w.objectPosition }};">
+              </sc-if>
+              <sc-if value="{{ w.placeholder }}" hint-placeholder-val="{{ true }}">
+                <image-slot id="{{ w.slotId }}-2" shape="rect" placeholder="{{ w.placeholderText }}"></image-slot>
+              </sc-if>
+              <sc-if value="{{ w.isVideo }}" hint-placeholder-val="{{ false }}">
+                <div onClick="{{ w.pickVideo }}" onDragOver="{{ preventDefault }}" onDrop="{{ w.dropVideo }}" style="width: 100%; height: 100%; position: relative; cursor: pointer; border: 1px dashed #E2E5EC; box-sizing: border-box; overflow: hidden;">
+                  <sc-if value="{{ w.videoSrc }}" hint-placeholder-val="{{ false }}">
+                    <video src="{{ w.videoSrc }}" loop="" playsinline="" controls="" style="width: 100%; height: 100%; object-fit: cover;"></video>
+                  </sc-if>
+                  <sc-if value="{{ w.videoSrcMissing }}" hint-placeholder-val="{{ true }}">
+                    <div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
+                      <div style="width: 46px; height: 46px; border-radius: 50%; border: 1px solid #6B7280; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #6B7280;">►</div>
+                      <div style="font-size: 11px; color: #6B7280; letter-spacing: 0.05em; text-align: center; padding: 0 20px;">{{ w.name }}</div>
+                      <div style="font-size: 10px; color: #6B7280; letter-spacing: 0.05em;">Click or drop a video</div>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="background: #0F0F0F;">
+    <div style="padding: 72px max(48px, 5vw) 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <div>
+        <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 14px;">The Approach</div>
+        <h2 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(44px, 6vw, 110px); line-height: 0.88; letter-spacing: 0.005em; color: #FFFFFF; margin: 0;">Our Craft,<br>End To End</h2>
+      </div>
+      <p style="font-size: 13px; line-height: 1.95; color: rgba(255,255,255,0.6); font-weight: 300; margin: 0;">
+        From the first sketch to the final cut.<br>
+        <em style="font-style: italic; color: rgba(255,255,255,0.75); font-family: 'Times New Roman', Times, serif; font-size: 15px;">We'd rather do fewer things well than everything at once.</em>
+      </p>
+    </div>
+    <div style="padding: 56px 0; overflow: hidden; white-space: nowrap; border-top: 1px solid rgba(255,255,255,0.06);">
+      <div style="display: inline-block; animation: vt-scroll 24s linear infinite;">
+        <sc-for list="{{ serviceNames }}" as="svc" hint-placeholder-count="10">
+          <span style="font-family: 'Times New Roman', Times, serif; font-size: clamp(32px, 5vw, 64px); font-weight: 700; color: #FFFFFF; padding: 0 44px;">{{ svc }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" style="background: #FFFFFF;">
+    <div style="padding: 72px max(48px, 5vw) 40px; border-bottom: 1px solid #E2E5EC;">
+      <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; color: #6B7280; margin-bottom: 14px;">The People Behind It</div>
+      <h2 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(44px, 6vw, 110px); line-height: 0.88; letter-spacing: 0.005em; margin: 0;">A Few People,<br>Many Disciplines.</h2>
+    </div>
+    <div>
+      <sc-for list="{{ team }}" as="member" hint-placeholder-count="3">
+        <div style="display: grid; grid-template-columns: 200px 1fr; align-items: center; gap: 48px; padding: 44px max(48px, 5vw); border-bottom: 1px solid #E2E5EC;">
+          <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; background: #0F0F0F; flex-shrink: 0;">
+            <image-slot id="{{ member.slotId }}" shape="circle" placeholder="{{ member.placeholder }}" src="{{ member.photo }}"></image-slot>
+          </div>
+          <div>
+            <div style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(26px, 2.6vw, 42px); letter-spacing: 0.005em; line-height: 1; margin-bottom: 8px;">{{ member.name }}</div>
+            <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; color: #6B7280; margin-bottom: 20px;">{{ member.role }}</div>
+            <p style="font-size: 13px; line-height: 1.95; color: #6B7280; font-weight: 300; margin: 0; max-width: 640px;">{{ member.bio }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="clients" style="background: #F6F7F9;">
+    <div style="padding: 72px max(48px, 5vw) 40px; border-bottom: 1px solid #E2E5EC;">
+      <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; color: #6B7280; margin-bottom: 14px;">Familiar Names</div>
+      <h2 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(44px, 6vw, 110px); line-height: 0.88; letter-spacing: 0.005em; margin: 0;">Names We've<br>Earned Trust With</h2>
+    </div>
+    <div style="padding: 40px 0 12px; overflow: hidden; white-space: nowrap;">
+      <div style="display: inline-block; animation: vt-scroll 38s linear infinite;">
+        <sc-for list="{{ clients }}" as="client" hint-placeholder-count="18">
+          <div style="display: inline-flex; align-items: center; justify-content: center; height: 46px; margin: 0 24px; opacity: 0.75; filter: grayscale(1);">
+            <img src="{{ client.img }}" alt="{{ client.name }}" style="width: auto; height: 100%; max-width: 175px; object-fit: contain;">
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="padding: 12px 0 40px; overflow: hidden; white-space: nowrap;">
+      <div style="display: inline-block; animation: vt-scroll-rev 38s linear infinite;">
+        <sc-for list="{{ clientsRev }}" as="client" hint-placeholder-count="18">
+          <div style="display: inline-flex; align-items: center; justify-content: center; height: 46px; margin: 0 24px; opacity: 0.75; filter: grayscale(1);">
+            <img src="{{ client.img }}" alt="{{ client.name }}" style="width: auto; height: 100%; max-width: 175px; object-fit: contain;">
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="background: #0F0F0F;">
+    <div style="padding: 72px max(48px, 5vw) 40px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 14px;">Get In Touch</div>
+      <h2 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(44px, 6vw, 110px); line-height: 0.88; letter-spacing: 0.005em; color: #FFFFFF; margin: 0;">Say Hello.</h2>
+      <p style="font-family: 'Times New Roman', Times, serif; font-size: 16px; font-weight: 400; font-style: italic; color: rgba(255,255,255,0.6); margin-top: 14px;">Bring us the idea, half-formed is fine. We like the ones that start that way.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+      <div style="padding: 60px max(48px, 5vw); border-right: 1px solid rgba(255,255,255,0.06);">
+        <div style="margin-bottom: 34px;">
+          <div style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 8px;">New Business</div>
+          <div style="font-family: 'Times New Roman', Times, serif; font-size: 19px; font-weight: 400; color: #FFFFFF; line-height: 1.45;">arun@visualtheorem.com</div>
+        </div>
+        <div style="margin-bottom: 34px;">
+          <div style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 8px;">General Enquiries</div>
+          <div style="font-family: 'Times New Roman', Times, serif; font-size: 19px; font-weight: 400; color: #FFFFFF; line-height: 1.45;">sayhello@visualtheorem.com</div>
+        </div>
+        <div style="margin-bottom: 34px;">
+          <div style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 8px;">India</div>
+          <div style="font-family: 'Times New Roman', Times, serif; font-size: 19px; font-weight: 400; color: #FFFFFF; line-height: 1.45;">+91 81230 48969</div>
+        </div>
+        <div style="margin-bottom: 34px;">
+          <div style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 8px;">United Kingdom</div>
+          <div style="font-family: 'Times New Roman', Times, serif; font-size: 19px; font-weight: 400; color: #FFFFFF; line-height: 1.45;">+44 7438 398 718</div>
+        </div>
+        <div style="margin-bottom: 34px;">
+          <div style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 8px;">Availability</div>
+          <div style="font-family: 'Times New Roman', Times, serif; font-size: 19px; font-weight: 400; color: #FFFFFF; line-height: 1.45;">Taking on a few new stories a year&nbsp;</div>
+        </div>
+        <div style="margin-top: 52px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.06); font-family: 'Times New Roman', Times, serif; font-size: 26px; font-weight: 400; line-height: 1.5; color: rgba(255,255,255,0.45); font-style: italic;">"You don't need a finished brief to start a conversation with us."</div>
+      </div>
+      <div style="padding: 60px max(48px, 5vw);">
+        <div style="margin-bottom: 28px;">
+          <label style="display: block; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 10px;">Your Name</label>
+          <input type="text" placeholder="Full name" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.09); padding: 10px 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; color: #FFFFFF; outline: none;">
+        </div>
+        <div style="margin-bottom: 28px;">
+          <label style="display: block; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 10px;">Email Address</label>
+          <input type="email" placeholder="your@email.com" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.09); padding: 10px 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; color: #FFFFFF; outline: none;">
+        </div>
+        <div style="margin-bottom: 28px;">
+          <label style="display: block; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 10px;">Your Brand / Company</label>
+          <input type="text" placeholder="Where do you work?" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.09); padding: 10px 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; color: #FFFFFF; outline: none;">
+        </div>
+        <div style="margin-bottom: 28px;">
+          <label style="display: block; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.55); margin-bottom: 10px;">Tell Us About Your Brand &amp; Project</label>
+          <textarea placeholder="A little about you, what you're working on, and how we can help." style="width: 100%; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.09); padding: 10px 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; color: #FFFFFF; outline: none; resize: none; height: 86px;"></textarea>
+        </div>
+        <a href="mailto:arun@visualtheorem.com" style="display: inline-block; background: #1B2A4A; color: #FFFFFF; border: none; padding: 14px 46px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-top: 6px;" style-hover="opacity: 0.8;">Send It Our Way →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #0F0F0F; border-top: 1px solid rgba(255,255,255,0.06); padding: 28px max(48px, 5vw); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;">
+    <div style="font-family: 'Times New Roman', Times, serif; font-size: 16px; letter-spacing: 0.02em; color: #FFFFFF;">Visual Theorem</div>
+    <div style="font-size: 11px; letter-spacing: 0.06em; color: rgba(255,255,255,0.5); text-align: center;">© 2026 Visual Theorem. All rights reserved.</div>
+    <div style="display: flex; gap: 24px; justify-content: flex-end;">
+      <a href="https://instagram.com/visualtheorem" target="_blank" style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.55);" style-hover="color: #fff;">Instagram</a>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  marqueeBase = ['Campaign Direction', 'Brand Films', 'Content Production', 'Photography & Editorial', 'Post-Production', 'Visual Storytelling'];
+
+  statsMarquee = ['500+ projects across brands & mediums', '25+ years of combined experience', 'Global production support', 'Small team, big reach'];
+
+  workItemsBase = [
+    { slotId: 'work-1', span: 5, ratio: '4/5', img: 'assets/work-watch-1.jpg', placeholder: false, tag: 'Catalogue Photography', name: 'Fastrack Campaign\nChronograph' },
+    { slotId: 'work-2', span: 5, ratio: '4/5', img: 'assets/work-watch-2.jpg', placeholder: false, tag: 'Catalogue Photography', name: 'Fastrack Campaign\nLadies Collection' },
+    { slotId: 'work-fashion-duo', span: 7, ratio: '4/5', img: 'assets/work-fashion-duo.webp', placeholder: false, tag: 'Fashion Editorial', name: 'Al Zain Jewellers\nResort Collection Runway' },
+    { slotId: 'work-jewelry-sea', span: 7, ratio: '16/10', img: 'assets/work-jewelry-sea.png', placeholder: false, tag: 'Jewelry Campaign', name: 'Emerald & Pearl\nCoastal Shoot' },
+    { slotId: 'work-gold-gown', span: 5, ratio: '4/5', img: 'assets/work-gold-gown.webp', placeholder: false, tag: 'Fashion Editorial', name: 'Taali \nHaute Couture ' },
+    { slotId: 'work-sunglasses', span: 5, ratio: '4/5', img: 'assets/work-sunglasses.png', placeholder: false, tag: 'Campaign & Styling', name: 'Kamyen \u2013 The Private Jeweller, Dubai\nEyewear Detail Shot' },
+    { slotId: 'work-rings', span: 5, ratio: '4/5', img: 'assets/work-rings.png', placeholder: false, tag: 'Jewelry Campaign', name: 'Fine Jewelry\nDetail Shot' },
+    { slotId: 'work-pearl-editorial', span: 7, ratio: '16/10', img: 'assets/work-pearl-editorial.png', placeholder: false, tag: 'Brand Campaign', name: 'Al Zain Jewellers\nEchoes of the Pearl' },
+    { slotId: 'work-wine-schwarz', span: 5, ratio: '4/5', img: 'assets/work-wine-schwarz.jpg', placeholder: false, tag: 'Product Photography & Styling', name: 'Becksteiner Winzer Wines\nSchwarzriesling' },
+    { slotId: 'work-wine-suss', span: 5, ratio: '4/5', img: 'assets/work-wine-suss.jpg', placeholder: false, tag: 'Product Photography', name: 'Becksteiner Winzer' },
+    { slotId: 'work-beer-brunonia', span: 5, ratio: '4/5', img: 'assets/work-beer-brunonia.jpg', placeholder: false, tag: 'Product Photography & Concept', name: 'Beveridge Campaign\nBrunonia Lager' },
+    { slotId: 'work-wine-rose', span: 5, ratio: '4/5', img: 'assets/work-wine-rose.jpg', placeholder: false, tag: 'Product Photography', name: 'Beveridge Campaign\nRos\u00e9 Secco' },
+    { slotId: 'work-jewelry-back', span: 5, ratio: '4/5', img: 'assets/work-jewelry-back.png', placeholder: false, tag: 'Styling', name: 'Al Zain Jewellers\nLayered Necklaces' },
+    { slotId: 'work-zivame-activewear', span: 5, ratio: '4/5', img: 'assets/work-zivame-activewear.jpg', placeholder: false, tag: 'Casting', name: 'Zivame Campaign\nActivewear' },
+    { slotId: 'work-zivame-bra', span: 5, ratio: '4/5', img: 'assets/work-zivame-bra.jpg', placeholder: false, tag: 'Casting', name: 'Zivame Campaign\nLingerie' },
+    { slotId: 'work-vogue-editorial', span: 5, ratio: '4/5', img: 'assets/work-vogue-v2.jpg', placeholder: false, tag: 'Editorial', name: 'Vogue India\nLittle Red Riding Indian', objectPosition: 'center' },
+    { slotId: 'work-vanheusen-cloud', span: 5, ratio: '4/5', img: 'assets/work-vanheusen-cloud-crop.png', placeholder: false, tag: 'Campaign', name: 'Van Heusen\nHardik Pandya' },
+    { slotId: 'work-vanheusen-teal', span: 5, ratio: '4/5', img: 'assets/work-vanheusen-teal-crop.png', placeholder: false, tag: 'Campaign', name: 'Van Heusen\nHardik Pandya' }
+  ];
+
+  videoItemsBase = [
+    { slotId: 'video-reel-1', span: 5, ratio: '4/5', isVideo: true, placeholder: false, img: null, defaultSrc: 'assets/video-reel-1.mp4', tag: 'Brand Film ·', name: 'Talent Management' },
+    { slotId: 'video-reel-2', span: 7, ratio: '16/10', isVideo: true, placeholder: false, img: null, defaultSrc: 'assets/video-reel-2.mp4', tag: 'Behind The Scenes', name: 'BTS Clip' },
+    { slotId: 'video-reel-3', span: 5, ratio: '4/5', isVideo: true, placeholder: false, img: null, defaultSrc: 'assets/video-reel-3.mp4', tag: 'Social Content', name: 'Short-Form Clip' },
+    { slotId: 'video-poco-bts', span: 7, ratio: '16/10', isVideo: true, placeholder: false, img: null, defaultSrc: 'assets/video-poco-bts.mp4', tag: 'Behind The Scenes', name: 'POCO X5 Pro\nHardik Pandya BTS' }
+  ];
+
+  serviceNamesBase = ['Brand Identity', 'International Production Support', 'Brand Positioning', 'Concept Development', 'Commercials', 'Brand Films', 'Corporate Communications', 'Reels & Short Form Content', 'Behind The Scenes & Event Coverage', 'Campaign Stills', 'Catalogue & Product Photography', 'Line Production', 'Celebrity Bookings'];
+
+  clientsBase = [
+    { name: 'Melorra', img: 'assets/client-melorra.png' }, { name: 'Bosch', img: 'assets/client-bosch.png' },
+    { name: 'Northern Arc', img: 'assets/client-northern-arc.png' }, { name: 'Becksteiner', img: 'assets/client-becksteiner.png' },
+    { name: 'Himalaya Herbals', img: 'assets/client-himalaya.png' }, { name: 'ITC', img: 'assets/client-itc.png' },
+    { name: 'Diageo', img: 'assets/client-diageo.png' }, { name: 'Schneider Electric', img: 'assets/client-schneider.png' },
+    { name: 'Epson', img: 'assets/client-epson.png' }, { name: 'JSW', img: 'assets/client-jsw.png' },
+    { name: 'OLA', img: 'assets/client-ola.png' }, { name: 'Unacademy', img: 'assets/client-unacademy.png' },
+    { name: 'Reliance', img: 'assets/client-reliance.png' }, { name: 'Honda', img: 'assets/client-honda.png' },
+    { name: 'TVS', img: 'assets/client-tvs.png' }, { name: 'Titan', img: 'assets/client-titan.png' },
+    { name: 'Xiaomi', img: 'assets/client-xiaomi.png' }, { name: 'POCO', img: 'assets/client-poco.png' },
+    { name: 'Infosys', img: 'assets/client-infosys.png' }, { name: 'Indian Terrain', img: 'assets/client-indian-terrain.png' },
+    { name: 'Tata Cliq', img: 'assets/client-tatacliq.png' }, { name: 'Aditya Birla Group', img: 'assets/client-aditya-birla.png' },
+    { name: 'Toyota', img: 'assets/client-toyota.png' }
+  ].map((c, i) => ({ ...c, slotId: 'client-' + i }));
+
+  team = [
+    { slotId: 'team-arun', num: '01', placeholder: 'Add Arun portrait', photo: 'assets/team-arun.jpg', name: 'Arun Vijay', role: 'Executive Producer & International Production Specialist', bio: "Over a decade behind the camera, working across agency and in-house teams on campaigns for Honda, TVS, Bosch, Diageo, Xiaomi, Tata, and Reliance. As an executive producer, his job is to make the visual world a brand needs feel inevitable, and then to actually get it made. Most of what he borrows from comes from outside the industry: a film he's watched too many times, an album that's better the longer you sit with it, a building or a meal someone clearly took their time over. A natural linguist who speaks around nine languages, he works as comfortably with expat crews as with local ones. He also believes India should be shooting far more of the world's work than it does, being a country people travel to in search of something larger than themselves." },
+    { slotId: 'team-nikita', num: '02', placeholder: 'Add Nikita portrait', photo: 'assets/team-nikita.jpeg', name: 'Nikita Eliza Jacob', role: 'Head of business - middle east', bio: "Her career began at Vogue India, and her work has since appeared in Vogue Arabia, Elle Arabia, Elle India, Harper's Bazaar Vietnam, and Emmy Magazine. Over six years she has led creative projects across celebrity styling, television commercials, music videos, editorial productions, and large-scale fashion campaigns, taking ideas from first concept through to final execution. She holds a Master of Arts in Fashion Art Direction from the Academy of Art University in San Francisco, and has styled Jonathan Bailey, Matt Bomer, Nava Mau, Edgar Ramirez, Richa Moorjani, and the Wayans family." },
+    { slotId: 'team-harthika', num: '03', placeholder: 'Add Harthika portrait', photo: 'assets/team-harthika.jpeg', name: 'Harthika Naidu', role: 'Creative producer', bio: "Part producer, part stylist, part storyteller. Unable to settle on one major in college, she studied psychology, visual communication, and performing arts, which in hindsight turned out to be the perfect advertising cocktail. Her career began on the production side of advertising, where she learned to build campaigns from the ground up, though a longstanding love of aesthetics kept pulling her toward wardrobe and styling. Over the past five years she has moved from running sets as a producer to building looks as a stylist, and often does both at once." },
+  ];
+
+  state = { videoSrcs: {} };
+
+  pickVideo(slotId) {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'video/*';
+    input.onchange = (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (file) this._setVideo(slotId, file);
+    };
+    input.click();
+  }
+
+  _setVideo(slotId, file) {
+    const url = URL.createObjectURL(file);
+    this.setState(s => ({ videoSrcs: { ...s.videoSrcs, [slotId]: url } }));
+  }
+
+  dropVideo(slotId, e) {
+    e.preventDefault();
+    const file = e.dataTransfer.files && e.dataTransfer.files[0];
+    if (file && file.type.startsWith('video/')) this._setVideo(slotId, file);
+  }
+
+  renderVals() {
+    const withUniqueIds = (arr, prefix) => arr.map((w, i) => ({ ...w, slotId: w.slotId + '-' + prefix + i }));
+    const wi = this.workItemsBase, vi = this.videoItemsBase;
+    const mixed1 = [
+      wi[4], vi[0], wi[9], wi[1], wi[11], vi[1], wi[6], wi[0],
+      wi[16], wi[13], wi[8], wi[3], vi[2], wi[10], wi[15], wi[2], wi[7],
+      wi[14], vi[3], wi[17], wi[12], wi[5]
+    ];
+    const mixed2 = mixed1.slice().reverse();
+    const clientLogos = (arr, prefix) => arr.map((c, i) => ({ ...c, slotId: c.slotId + '-' + prefix + i }));
+    const withVideoState = (arr) => arr.map(w => w.isVideo ? {
+      ...w,
+      videoSrc: this.state.videoSrcs[w.slotId] || w.defaultSrc,
+      videoSrcMissing: !(this.state.videoSrcs[w.slotId] || w.defaultSrc),
+      pickVideo: () => this.pickVideo(w.slotId),
+      dropVideo: (e) => this.dropVideo(w.slotId, e)
+    } : w);
+    return {
+      marqueeTags: this.marqueeBase.concat(this.marqueeBase),
+      statsMarquee: this.statsMarquee.concat(this.statsMarquee.slice(0, 2)),
+      workRow1: withVideoState(withUniqueIds(mixed1.concat(mixed1), 'r1')),
+      workRow2: withVideoState(withUniqueIds(mixed2.concat(mixed2), 'r2')),
+      serviceNames: this.serviceNamesBase.concat(this.serviceNamesBase),
+      clients: clientLogos(this.clientsBase.concat(this.clientsBase), 'c1'),
+      clientsRev: clientLogos(this.clientsBase.slice().reverse().concat(this.clientsBase.slice().reverse()), 'c2'),
+      team: this.team,
+      preventDefault: (e) => e.preventDefault()
+    };
+  }
+}
+
+</script>
+</body>
+</html>
