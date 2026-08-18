@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sasspapi.github.io/Visualtheorem/sitemap.xml
+Sitemap: https://www.visualtheorem.com/sitemap.xml
