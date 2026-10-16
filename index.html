@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N314CXY3ZW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-N314CXY3ZW');
-</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
@@ -19,8 +11,28 @@
 <style>
   body { margin: 0; }
   </style>
-  <link rel="icon" type="image/svg+xml" href="assets/vt-logo.svg">
-  <link rel="apple-touch-icon" href="assets/vt-logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+  <title>Visual Theorem — Video Production Company in Bangalore | Ad Films &amp; Corporate Video</title>
+  <meta name="description" content="Visual Theorem is a video production company in Bangalore making advertising films, corporate videos, brand campaigns and photography. 500+ projects for 120+ brands. Studio near Indiranagar, Bengaluru.">
+  <meta name="keywords" content="video production company Bangalore, advertising film production Bangalore, corporate video production Bengaluru, ad film makers Bangalore, production house Indiranagar, brand film studio Bangalore, product photography Bangalore">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="geo.region" content="IN-KA">
+  <meta name="geo.placename" content="Bengaluru">
+  <link rel="canonical" href="https://visualtheorem.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visual Theorem">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="Visual Theorem — Video Production Company in Bangalore">
+  <meta property="og:description" content="Advertising films, corporate video and brand campaigns, made in Bengaluru for brands worldwide. Storytelling is everything.">
+  <meta property="og:url" content="https://visualtheorem.com/">
+  <meta property="og:image" content="https://visualtheorem.com/assets/hero-studio.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Visual Theorem — Video Production Company in Bangalore">
+  <meta name="twitter:description" content="Advertising films, corporate video and brand campaigns, made in Bengaluru for brands worldwide.">
+  <meta name="twitter:image" content="https://visualtheorem.com/assets/hero-studio.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":["ProductionCompany","LocalBusiness"],"@id":"https://visualtheorem.com/#studio","name":"Visual Theorem","alternateName":"Visual Theorem Productions","url":"https://visualtheorem.com/","logo":"https://visualtheorem.com/assets/vt-logo.svg","image":"https://visualtheorem.com/assets/hero-studio.jpg","email":"arun@visualtheorem.com","telephone":"+91-81230-48969","foundingDate":"2019","slogan":"Storytelling is everything.","description":"Visual Theorem is a video production company in Bangalore making advertising films, corporate videos, brand campaigns and photography for brands in India and worldwide.","priceRange":"$$$","address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressRegion":"Karnataka","addressCountry":"IN"},"areaServed":[{"@type":"City","name":"Bengaluru"},{"@type":"Country","name":"India"},{"@type":"Country","name":"United Kingdom"},{"@type":"Place","name":"Middle East"}],"sameAs":["https://instagram.com/visualtheorem"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Advertising film production"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Corporate video production"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Brand film and campaign direction"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Photography and editorial stills"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Post-production, edit and colour grade"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which production companies in Bangalore offer corporate video services?","acceptedAnswer":{"@type":"Answer","text":"Visual Theorem is a Bengaluru-based production company offering corporate video, internal communication films, founder and brand documentaries, and event coverage, run end to end from brief through to final grade."}},{"@type":"Question","name":"Where is Visual Theorem located in Bangalore?","acceptedAnswer":{"@type":"Answer","text":"Visual Theorem works out of Bengaluru, close to Indiranagar, and produces on location across India, the United Kingdom and the Middle East."}},{"@type":"Question","name":"What does Visual Theorem produce?","acceptedAnswer":{"@type":"Answer","text":"Advertising and ad films, corporate video, brand campaign films, product and fashion photography, and full post-production including edit, sound and colour grade."}},{"@type":"Question","name":"How experienced is the team?","acceptedAnswer":{"@type":"Answer","text":"Over 500 projects delivered for more than 120 brands, with 25+ years of combined experience across direction, production and post."}}]}</script>
   <style>
   a { color: inherit; text-decoration: none; }
   a:hover { color: #1B2A4A; }
@@ -32,7 +44,12 @@
   [data-r~="hero-line"] { display: block; overflow: hidden; padding-bottom: 0.06em; }
   [data-r~="hero-line"] > span { display: block; padding-bottom: 0.18em; margin-bottom: -0.12em; animation: vt-rise 1.05s cubic-bezier(0.16,1,0.3,1) both; }
   [data-r~="hero-fade"] { animation: vt-fade-up 0.9s cubic-bezier(0.16,1,0.3,1) both; }
+  @keyframes vt-pipe-dot { from { transform: translateX(-5px); } to { transform: translateX(34px); } }
   @keyframes vt-frame-in { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: scale(1); } }
+  @media (max-width: 1280px) {
+    [data-r~="pipe-grid"] { grid-template-columns: 1fr !important; gap: 34px !important; }
+    [data-r~="pipe-diagram"] { min-height: 0 !important; }
+  }
   @media (max-width: 900px) {
     [data-r~="hero"] { padding: 0 !important; min-height: 0 !important; }
     [data-r~="hero-grid"] { min-height: 88vh !important; padding: 40px max(24px, 5vw) 40px !important; gap: 40px; }
@@ -53,9 +70,25 @@
     [data-r~="hero-foot"] > div { text-align: left !important; }
     [data-r~="hero-media"] { height: 62vh !important; }
     [data-r~="hero-img"] { position: static !important; width: 100% !important; height: 100% !important; object-fit: cover !important; }
-    [data-r~="two-col"] { grid-template-columns: 1fr !important; gap: 28px !important; }
+    [data-r~="two-col"], [data-r~="seo-intro"], [data-r~="pipe-grid"] { grid-template-columns: 1fr !important; gap: 28px !important; }
+    [data-r~="pipe-grid"] { padding: 32px 24px 60px !important; }
+    [data-r~="pipe-diagram"] { padding: 22px 16px 20px !important; min-height: 0 !important; }
+    [data-r~="pipe-nodes"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+    [data-r~="pin-scope"] { height: 330vh !important; }
+    [data-r~="cut-pin"] { height: 340vh !important; }
+    [data-r~="cut-pad"] { padding-left: 24px !important; padding-right: 24px !important; }
+    [data-cut="head"] { padding-top: 76px !important; }
+    [data-r~="cut-ctrl"] { display: none !important; }
+    [data-cut="panel"] { left: 24px !important; right: 24px !important; }
+    [data-r~="cut-name"] { font-size: clamp(32px, 6.5vh, 44px) !important; }
+    [data-r~="cut-phases"], [data-r~="cut-node-name"], [data-r~="cut-node-tag"] { display: none !important; }
+    [data-r~="cut-track"] { padding-bottom: 40px !important; }
+    [data-r~="cut-bgnum"] { width: 90vw !important; height: 70vw !important; top: 30% !important; }
+    [data-cut="bgnum"] { font-size: 70vw !important; }
+    [data-cut="final"] { justify-content: flex-start !important; }
+    [data-r~="cut-final"] { font-size: 10px !important; }
     [data-r~="pad"] { padding-left: 24px !important; padding-right: 24px !important; padding-top: 52px !important; }
-    [data-r~="work-card"], [data-r~="work-tile"] { width: 72vw !important; }
+    [data-r~="work-card"], [data-r~="work-tile"] { width: min(60vw, 29vh) !important; }
     [data-r~="team-row"] { grid-template-columns: 1fr !important; gap: 22px !important; padding: 34px 24px !important; }
     [data-r~="team-photo"] { width: 128px !important; height: 128px !important; }
     [data-r~="contact-col"] { border-right: none !important; padding: 44px 24px !important; }
@@ -69,18 +102,79 @@
   }
 </style>
 <script src="./image-slot.js"></script>
+<meta name="ext-resource-dependency" content="assets/favicon.svg">
+<meta name="ext-resource-dependency" content="assets/vt-logo.svg">
+<meta name="ext-resource-dependency" content="assets/hero-studio.jpg">
+<meta name="ext-resource-dependency" content="assets/alexa-35-clean.jpg">
+<meta name="ext-resource-dependency" content="assets/poster-video-reel-1.png">
+<meta name="ext-resource-dependency" content="assets/work-watch-1.jpg">
+<meta name="ext-resource-dependency" content="assets/work-watch-2.jpg">
+<meta name="ext-resource-dependency" content="assets/work-fashion-duo.webp">
+<meta name="ext-resource-dependency" content="assets/work-jewelry-sea.png">
+<meta name="ext-resource-dependency" content="assets/work-gold-gown.webp">
+<meta name="ext-resource-dependency" content="assets/work-sunglasses.png">
+<meta name="ext-resource-dependency" content="assets/work-rings.png">
+<meta name="ext-resource-dependency" content="assets/work-pearl-editorial.png">
+<meta name="ext-resource-dependency" content="assets/work-wine-schwarz.jpg">
+<meta name="ext-resource-dependency" content="assets/work-wine-suss.jpg">
+<meta name="ext-resource-dependency" content="assets/work-beer-brunonia.jpg">
+<meta name="ext-resource-dependency" content="assets/work-wine-rose.jpg">
+<meta name="ext-resource-dependency" content="assets/work-jewelry-back.png">
+<meta name="ext-resource-dependency" content="assets/work-zivame-activewear.jpg">
+<meta name="ext-resource-dependency" content="assets/work-zivame-bra.jpg">
+<meta name="ext-resource-dependency" content="assets/work-vogue-v2.jpg">
+<meta name="ext-resource-dependency" content="assets/work-vanheusen-cloud-crop.png">
+<meta name="ext-resource-dependency" content="assets/work-vanheusen-teal-crop.png">
+<meta name="ext-resource-dependency" content="assets/video-reel-1.mp4">
+<meta name="ext-resource-dependency" content="assets/video-reel-2.mp4">
+<meta name="ext-resource-dependency" content="assets/poster-video-reel-2.png">
+<meta name="ext-resource-dependency" content="assets/video-reel-3.mp4">
+<meta name="ext-resource-dependency" content="assets/poster-video-reel-3.png">
+<meta name="ext-resource-dependency" content="assets/video-poco-bts.mp4">
+<meta name="ext-resource-dependency" content="assets/poster-video-poco-bts.png">
+<meta name="ext-resource-dependency" content="assets/client-melorra.png">
+<meta name="ext-resource-dependency" content="assets/client-bosch.png">
+<meta name="ext-resource-dependency" content="assets/client-northern-arc.png">
+<meta name="ext-resource-dependency" content="assets/client-becksteiner.png">
+<meta name="ext-resource-dependency" content="assets/client-himalaya.png">
+<meta name="ext-resource-dependency" content="assets/client-itc.png">
+<meta name="ext-resource-dependency" content="assets/client-diageo.png">
+<meta name="ext-resource-dependency" content="assets/client-schneider.png">
+<meta name="ext-resource-dependency" content="assets/client-epson.png">
+<meta name="ext-resource-dependency" content="assets/client-jsw.png">
+<meta name="ext-resource-dependency" content="assets/client-ola.png">
+<meta name="ext-resource-dependency" content="assets/client-unacademy.png">
+<meta name="ext-resource-dependency" content="assets/client-reliance.png">
+<meta name="ext-resource-dependency" content="assets/client-honda.png">
+<meta name="ext-resource-dependency" content="assets/client-tvs.png">
+<meta name="ext-resource-dependency" content="assets/client-titan.png">
+<meta name="ext-resource-dependency" content="assets/client-xiaomi.png">
+<meta name="ext-resource-dependency" content="assets/client-poco.png">
+<meta name="ext-resource-dependency" content="assets/client-infosys.png">
+<meta name="ext-resource-dependency" content="assets/client-indian-terrain.png">
+<meta name="ext-resource-dependency" content="assets/client-tatacliq.png">
+<meta name="ext-resource-dependency" content="assets/client-aditya-birla.png">
+<meta name="ext-resource-dependency" content="assets/client-toyota.png">
+<meta name="ext-resource-dependency" content="assets/team-arun.jpg">
+<meta name="ext-resource-dependency" content="assets/team-nikita.jpeg">
+<meta name="ext-resource-dependency" content="assets/team-harthika.jpeg">
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1B2A4A"/><text x="50" y="62" text-anchor="middle" font-family="Times New Roman, serif" font-weight="700" font-size="34" fill="#FFFFFF">VT</text></svg></template>
 </helmet>
 
 <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #FFFFFF; color: #0F0F0F; font-weight: 300; font-size: 16px; line-height: 1.6;">
 
   <nav data-r="nav" style="position: sticky; top: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 18px max(48px, 5vw); background: rgba(255,255,255,0.94); backdrop-filter: blur(16px); border-bottom: 1px solid #E2E5EC;">
-    <img src="assets/vt-logo.svg" data-r="logo" alt="Visual Theorem" style="height: 20px; width: auto; display: block;">
+    <a href="#work" aria-label="Visual Theorem — video production company in Bangalore" style="display: flex; align-items: center; gap: 12px;">
+      <img src="assets/vt-logo.svg" data-r="logo" alt="Visual Theorem — video production company in Bangalore" width="120" height="20" style="height: 20px; width: auto; display: block;">
+      <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;">Visual Theorem</span>
+    </a>
     <div data-r="nav-right" style="display: flex; align-items: center; gap: 40px;">
       <div data-r="nav-links" style="display: flex; gap: 32px;">
         <a href="#work" style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: #6B7280;" style-hover="color: #1B2A4A;">Work</a>
         <a href="#services" style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: #6B7280;" style-hover="color: #1B2A4A;">Services</a>
         <a href="#team" style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: #6B7280;" style-hover="color: #1B2A4A;">Studio</a>
         <a href="#clients" style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: #6B7280;" style-hover="color: #1B2A4A;">Clients</a>
+        
       </div>
       <a href="#contact" data-r="nav-cta" style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: #FFFFFF; background: #1B2A4A; padding: 10px 24px;" style-hover="opacity: 0.8;">Work With Us</a>
     </div>
@@ -110,6 +204,11 @@
     <div style="position: absolute; inset: 0; z-index: 5; pointer-events: none; opacity: 0.13; mix-blend-mode: overlay; background-image: url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='180' height='180' filter='url(%23n)' opacity='0.55'/></svg>&quot;); background-size: 180px 180px; animation: vt-grain 1.2s steps(2) infinite;"></div>
   </section>
 
+  <section data-r="pad seo-intro" style="background: #FFFFFF; padding: 56px max(48px, 5vw) 52px; border-bottom: 1px solid #E2E5EC; display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: start;">
+    <h2 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(26px, 2.6vw, 40px); line-height: 1.15; letter-spacing: 0.005em; margin: 0;">A video production company for brands in India, the UK and the UAE.</h2>
+    <p style="font-size: 15px; line-height: 1.95; color: #6B7280; margin: 0; max-width: 640px; text-wrap: pretty;"><strong style="font-weight: 700; color: #0F0F0F;">Visual Theorem</strong> is a film and photography studio working with brands in Bengaluru, London and Dubai. We make advertising films, corporate videos, brand campaigns and editorial stills — writing, shooting, editing and grading each one in house. Five hundred projects for a hundred and twenty brands, with crews on the ground wherever the story is.</p>
+  </section>
+
   <div style="background: #F6F7F9; padding: 15px 0; overflow: hidden; white-space: nowrap; border-bottom: 1px solid #E2E5EC;">
     <div style="display: inline-block; animation: vt-scroll 32s linear infinite;">
       <sc-for list="{{ statsMarquee }}" as="stat" hint-placeholder-count="4">
@@ -118,80 +217,125 @@
     </div>
   </div>
 
-  <section id="work" style="background: #FFFFFF;">
-    <div data-r="pad" style="padding: 72px max(48px, 5vw) 40px; display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px solid #E2E5EC; gap: 24px; flex-wrap: wrap;">
-      <div>
-        <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; color: #6B7280; margin-bottom: 14px;">A Small Archive</div>
-        <h2 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(44px, 6vw, 110px); line-height: 0.9; letter-spacing: 0.005em; margin: 0;">Crumbs Make<br>A Loaf</h2>
-      </div>
-      <p style="font-size: 13px; color: #6B7280; max-width: 260px; line-height: 1.8; text-align: right; margin: 0;">A handful of projects we still think about.</p>
-    </div>
-    <div style="padding: 32px 0; overflow: hidden; white-space: nowrap;">
-      <div style="display: inline-block; animation: vt-scroll 42s linear infinite;">
-        <sc-for list="{{ workRow1 }}" as="w" hint-placeholder-count="8">
-          <div data-r="work-card" style="display: inline-block; width: 340px; margin-right: 24px; vertical-align: top; white-space: normal;">
-            <div data-r="work-tile" style="width: 340px; aspect-ratio: 4/5; position: relative; overflow: hidden; background: #F6F7F9;">
-              <sc-if value="{{ w.img }}" hint-placeholder-val="{{ false }}">
-                <img src="{{ w.img }}" alt="{{ w.name }}" onClick="{{ w.openMe }}" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer; object-position: {{ w.objectPosition }};">
-              </sc-if>
-              <sc-if value="{{ w.placeholder }}" hint-placeholder-val="{{ true }}">
-                <image-slot id="{{ w.slotId }}" shape="rect" placeholder="{{ w.placeholderText }}"></image-slot>
-              </sc-if>
-              <sc-if value="{{ w.isVideo }}" hint-placeholder-val="{{ false }}">
-                <div onClick="{{ w.openMe }}" style="width: 100%; height: 100%; position: relative; cursor: pointer; box-sizing: border-box; overflow: hidden;">
-                  <sc-if value="{{ w.videoSrc }}" hint-placeholder-val="{{ false }}">
-                    <video src="{{ w.videoSrc }}" ref="{{ muteRef }}" data-marquee="1" loop="" playsinline="" muted="{{ true }}" autoplay="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
-                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
-                      <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(15,15,15,0.55); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 15px; padding-left: 3px;">&#9658;</div>
-                    </div>
+  <section id="work" style="background: #08080A;">
+
+    <div data-r="pin-scope" ref="{{ pinRef }}" style="position: relative; height: 440vh;">
+      <div style="position: sticky; top: 0; height: 100vh; overflow: hidden; background: #FFFFFF;">
+
+        <div style="position: absolute; inset: 0; overflow: hidden;">
+          <img src="./assets/alexa-35-clean.jpg" ref="{{ camPhotoRef }}" alt="ARRI Alexa 35 with CCM-1 monitor on a production rig" style="position: absolute; left: 0; top: 0; width: 1240px; will-change: transform; transform-origin: 696px 149px;">
+        </div>
+        <div ref="{{ vfScreenRef }}" data-vf-screen="1" style="position: absolute; inset: 0; background: #08080A; clip-path: inset(50% 50% 50% 50%); pointer-events: none;">
+          <img src="assets/poster-video-reel-1.png" alt="" style="position: absolute; left: 0; top: 0; width: 10px; height: 10px; object-fit: cover;">
+        </div>
+        <div ref="{{ vfGridRef }}" style="position: absolute; inset: 0; background: #08080A; clip-path: inset(50% 50% 50% 50%); opacity: 0; visibility: hidden;">
+          <div ref="{{ vfGridInnerRef }}" style="position: absolute; inset: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-auto-rows: minmax(0, 1fr); gap: 10px; padding: 10px; box-sizing: border-box; transform: scale(1.14);">
+            <sc-for list="{{ vfGrid }}" as="w" hint-placeholder-count="15">
+              <div onClick="{{ w.openMe }}" style="position: relative; overflow: hidden; background: #111214; cursor: pointer;">
+                <sc-if value="{{ w.img }}" hint-placeholder-val="{{ false }}">
+                  <img ref="{{ w.imgRef }}" alt="{{ w.name }}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: {{ w.objectPosition }};">
+                </sc-if>
+                <sc-if value="{{ w.isVideo }}" hint-placeholder-val="{{ false }}">
+                  <img ref="{{ w.posterRef }}" alt="{{ w.name }}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+          <div ref="{{ vfTitleRef }}" style="position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); text-align: center; padding: 96px 8vw; opacity: 0; will-change: opacity; background: radial-gradient(60% 120% at 50% 50%, rgba(8,8,10,0.94) 0%, rgba(8,8,10,0.82) 45%, rgba(8,8,10,0) 78%);">
+            <div style="font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.62); margin-bottom: 16px;">A Small Archive</div>
+            <h2 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(40px, 6.6vw, 118px); line-height: 0.92; letter-spacing: 0.005em; color: #FFFFFF; margin: 0;">Crumbs Make<br><em style="font-style: italic;">A Loaf</em></h2>
+            <p style="font-size: 13px; color: rgba(255,255,255,0.72); line-height: 1.8; margin: 20px auto 0; max-width: 300px;">A handful of projects we still think about.</p>
+          </div>
+        </div>
+
+        <div ref="{{ camLabelRef }}" style="position: absolute; left: 0; right: 0; top: 4.5vh; text-align: center; opacity: 0; will-change: opacity, transform;">
+          <div style="font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; color: #6B7280;">Arri Alexa 35 &nbsp;·&nbsp; 4.6K &nbsp;·&nbsp; Open Gate</div>
+          <div style="font-family: 'Times New Roman', Times, serif; font-size: clamp(22px, 2.7vw, 40px); font-weight: 700; color: #0F0F0F; line-height: 1.1; margin-top: 10px;">Keep scrolling. <em style="font-style: italic; color: #6B7280;">We're going in.</em></div>
+        </div>
+
+        <div ref="{{ vfRef }}" style="position: absolute; inset: 6vh 6vw; opacity: 0; pointer-events: none; will-change: opacity;">
+          <div style="position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-left: 3px solid #FFFFFF; border-top: 3px solid #FFFFFF;"></div>
+          <div style="position: absolute; right: 0; top: 0; width: 34px; height: 34px; border-right: 3px solid #FFFFFF; border-top: 3px solid #FFFFFF;"></div>
+          <div style="position: absolute; left: 0; bottom: 0; width: 34px; height: 34px; border-left: 3px solid #FFFFFF; border-bottom: 3px solid #FFFFFF;"></div>
+          <div style="position: absolute; right: 0; bottom: 0; width: 34px; height: 34px; border-right: 3px solid #FFFFFF; border-bottom: 3px solid #FFFFFF;"></div>
+          <div style="position: absolute; left: 50%; top: 50%; width: 22px; height: 1px; background: rgba(255,255,255,0.4); transform: translate(-50%,-50%);"></div>
+          <div style="position: absolute; left: 50%; top: 50%; width: 1px; height: 22px; background: rgba(255,255,255,0.4); transform: translate(-50%,-50%);"></div>
+          <div style="position: absolute; left: 22px; top: 20px; display: flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: 0.22em; font-weight: 700; color: #FFFFFF; text-shadow: 0 1px 8px rgba(0,0,0,0.8);">
+            <span style="width: 9px; height: 9px; border-radius: 50%; background: #E23A3A;"></span>REC
+          </div>
+          <div style="position: absolute; right: 22px; top: 20px; font-size: 10px; letter-spacing: 0.22em; font-weight: 700; color: #FFFFFF; text-shadow: 0 1px 8px rgba(0,0,0,0.8);">{{ hudTimecode }}</div>
+          <div style="position: absolute; left: 22px; bottom: 20px; font-size: 10px; letter-spacing: 0.2em; font-weight: 700; color: rgba(255,255,255,0.8); text-shadow: 0 1px 8px rgba(0,0,0,0.8);">35mm &nbsp;&nbsp; T2.8 &nbsp;&nbsp; 800 ASA &nbsp;&nbsp; 24 FPS</div>
+          <div style="position: absolute; right: 22px; bottom: 20px; font-size: 10px; letter-spacing: 0.2em; font-weight: 700; color: rgba(255,255,255,0.8); text-shadow: 0 1px 8px rgba(0,0,0,0.8);">The Work</div>
+        </div>
+
+        <div data-r="vf-frame" ref="{{ vfMarqRef }}" style="position: absolute; inset: 0; z-index: 3; background: #08080A; display: flex; flex-direction: column; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; will-change: transform, opacity;">
+          <div data-r="pad" style="padding: 26px max(48px, 5vw); display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: 0.22em; font-weight: 700; color: #FFFFFF;">
+              <span style="width: 9px; height: 9px; border-radius: 50%; background: #FFFFFF;"></span>REC &nbsp;·&nbsp; Inside The Viewfinder
+            </div>
+            <div style="font-size: 10px; letter-spacing: 0.2em; font-weight: 700; color: rgba(255,255,255,0.5);">Tap any frame to open it</div>
+          </div>
+        <div style="padding: 2.4vh 0; overflow: hidden; white-space: nowrap;">
+          <div style="display: inline-block; animation: vt-scroll 42s linear infinite;">
+            <sc-for list="{{ workRow1 }}" as="w" hint-placeholder-count="8">
+              <div data-r="work-card" style="display: inline-block; width: min(340px, 29vh); margin-right: 24px; vertical-align: top; white-space: normal;">
+                <div data-r="work-tile" style="width: min(340px, 29vh); aspect-ratio: 4/5; position: relative; overflow: hidden; background: #F6F7F9;">
+                  <sc-if value="{{ w.img }}" hint-placeholder-val="{{ false }}">
+                    <img ref="{{ w.imgRef }}" alt="{{ w.name }}" loading="lazy" decoding="async" onClick="{{ w.openMe }}" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer; object-position: {{ w.objectPosition }};">
                   </sc-if>
-                  <sc-if value="{{ w.videoSrcMissing }}" hint-placeholder-val="{{ true }}">
-                    <div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
-                      <div style="width: 46px; height: 46px; border-radius: 50%; border: 1px solid #6B7280; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #6B7280;">►</div>
-                      <div style="font-size: 11px; color: #6B7280; letter-spacing: 0.05em; text-align: center; padding: 0 20px;">{{ w.name }}</div>
-                      <div style="font-size: 10px; color: #6B7280; letter-spacing: 0.05em;">Click or drop a video</div>
+                  <sc-if value="{{ w.placeholder }}" hint-placeholder-val="{{ true }}">
+                    <image-slot id="{{ w.slotId }}" shape="rect" placeholder="{{ w.placeholderText }}"></image-slot>
+                  </sc-if>
+                  <sc-if value="{{ w.isVideo }}" hint-placeholder-val="{{ false }}">
+                    <div onClick="{{ w.openMe }}" style="width: 100%; height: 100%; position: relative; cursor: pointer; box-sizing: border-box; overflow: hidden;">
+                      <sc-if value="{{ w.poster }}" hint-placeholder-val="{{ false }}">
+                        <img ref="{{ w.posterRef }}" alt="{{ w.name }}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
+                      </sc-if>
+                      <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: rgba(8,8,10,0.3);">
+                        <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(15,15,15,0.55); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 15px; padding-left: 3px;">&#9658;</div>
+                      </div>
                     </div>
                   </sc-if>
                 </div>
-              </sc-if>
-            </div>
+              </div>
+            </sc-for>
           </div>
-        </sc-for>
-      </div>
-    </div>
-    <div style="padding: 0 0 32px; overflow: hidden; white-space: nowrap;">
-      <div style="display: inline-block; margin-left: -168px; animation: vt-scroll-rev 47s linear infinite;">
-        <sc-for list="{{ workRow2 }}" as="w" hint-placeholder-count="8">
-          <div data-r="work-card" style="display: inline-block; width: 340px; margin-right: 24px; vertical-align: top; white-space: normal;">
-            <div data-r="work-tile" style="width: 340px; aspect-ratio: 4/5; position: relative; overflow: hidden; background: #F6F7F9;">
-              <sc-if value="{{ w.img }}" hint-placeholder-val="{{ false }}">
-                <img src="{{ w.img }}" alt="{{ w.name }}" onClick="{{ w.openMe }}" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer; object-position: {{ w.objectPosition }};">
-              </sc-if>
-              <sc-if value="{{ w.placeholder }}" hint-placeholder-val="{{ true }}">
-                <image-slot id="{{ w.slotId }}-2" shape="rect" placeholder="{{ w.placeholderText }}"></image-slot>
-              </sc-if>
-              <sc-if value="{{ w.isVideo }}" hint-placeholder-val="{{ false }}">
-                <div onClick="{{ w.openMe }}" style="width: 100%; height: 100%; position: relative; cursor: pointer; box-sizing: border-box; overflow: hidden;">
-                  <sc-if value="{{ w.videoSrc }}" hint-placeholder-val="{{ false }}">
-                    <video src="{{ w.videoSrc }}" ref="{{ muteRef }}" data-marquee="1" loop="" playsinline="" muted="{{ true }}" autoplay="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></video>
-                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
-                      <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(15,15,15,0.55); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 15px; padding-left: 3px;">&#9658;</div>
-                    </div>
+        </div>
+        <div style="padding: 0 0 2.4vh; overflow: hidden; white-space: nowrap;">
+          <div style="display: inline-block; margin-left: -168px; animation: vt-scroll-rev 47s linear infinite;">
+            <sc-for list="{{ workRow2 }}" as="w" hint-placeholder-count="8">
+              <div data-r="work-card" style="display: inline-block; width: min(340px, 29vh); margin-right: 24px; vertical-align: top; white-space: normal;">
+                <div data-r="work-tile" style="width: min(340px, 29vh); aspect-ratio: 4/5; position: relative; overflow: hidden; background: #F6F7F9;">
+                  <sc-if value="{{ w.img }}" hint-placeholder-val="{{ false }}">
+                    <img ref="{{ w.imgRef }}" alt="{{ w.name }}" loading="lazy" decoding="async" onClick="{{ w.openMe }}" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer; object-position: {{ w.objectPosition }};">
                   </sc-if>
-                  <sc-if value="{{ w.videoSrcMissing }}" hint-placeholder-val="{{ true }}">
-                    <div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
-                      <div style="width: 46px; height: 46px; border-radius: 50%; border: 1px solid #6B7280; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #6B7280;">►</div>
-                      <div style="font-size: 11px; color: #6B7280; letter-spacing: 0.05em; text-align: center; padding: 0 20px;">{{ w.name }}</div>
-                      <div style="font-size: 10px; color: #6B7280; letter-spacing: 0.05em;">Click or drop a video</div>
+                  <sc-if value="{{ w.placeholder }}" hint-placeholder-val="{{ true }}">
+                    <image-slot id="{{ w.slotId }}-2" shape="rect" placeholder="{{ w.placeholderText }}"></image-slot>
+                  </sc-if>
+                  <sc-if value="{{ w.isVideo }}" hint-placeholder-val="{{ false }}">
+                    <div onClick="{{ w.openMe }}" style="width: 100%; height: 100%; position: relative; cursor: pointer; box-sizing: border-box; overflow: hidden;">
+                      <sc-if value="{{ w.poster }}" hint-placeholder-val="{{ false }}">
+                        <img ref="{{ w.posterRef }}" alt="{{ w.name }}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
+                      </sc-if>
+                      <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: rgba(8,8,10,0.3);">
+                        <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(15,15,15,0.55); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 15px; padding-left: 3px;">&#9658;</div>
+                      </div>
                     </div>
                   </sc-if>
                 </div>
-              </sc-if>
-            </div>
+              </div>
+            </sc-for>
           </div>
-        </sc-for>
+        </div>
+          <div data-r="pad" style="padding: 22px max(48px, 5vw); display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.1); font-size: 10px; letter-spacing: 0.2em; font-weight: 700; color: rgba(255,255,255,0.45);">
+            <span>35mm &nbsp;&nbsp; T2.8 &nbsp;&nbsp; 800 ASA &nbsp;&nbsp; 24 FPS</span>
+            <span>Visual Theorem &nbsp;·&nbsp; Bengaluru</span>
+          </div>
+        </div>
+
       </div>
     </div>
+
   </section>
 
   <section id="services" style="background: #0F0F0F;">
@@ -214,6 +358,80 @@
     </div>
   </section>
 
+  <section id="pipeline" style="background: #0B0B0D; border-top: 1px solid rgba(255,255,255,0.08);">
+   <div data-r="cut-pin" ref="{{ cutRef }}" style="position: relative; height: 400vh;">
+    <div style="position: sticky; top: 0; height: 100vh; overflow: hidden; display: flex; flex-direction: column;">
+
+      <div data-r="cut-bgnum" style="position: absolute; right: -2vw; top: 50%; transform: translateY(-50%); width: 46vw; height: 36vw; pointer-events: none;">
+        <sc-for list="{{ cutStages }}" as="c" hint-placeholder-count="5">
+          <div data-cut="bgnum" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: flex-end; font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: 34vw; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.09); opacity: 0; will-change: transform, opacity;">{{ c.num }}</div>
+        </sc-for>
+      </div>
+
+      <div data-cut="intro" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 6vw; will-change: transform, opacity;">
+        <div style="font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 26px;">02 / How We Work</div>
+        <h2 data-r="cut-intro-h" style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(52px, 8.6vw, 164px); line-height: 0.9; letter-spacing: 0.005em; color: #FFFFFF; margin: 0; text-wrap: balance;">Five stages.<br><em style="font-style: italic;">One brand story.</em></h2>
+        <p style="font-size: 14px; line-height: 1.9; color: rgba(255,255,255,0.6); max-width: 440px; margin: 28px 0 0;">Strategy, branding, production and marketing — this is how a Visual Theorem project moves from first call to launch.</p>
+      </div>
+
+      <div data-cut="head" data-r="cut-pad" style="position: relative; flex: none; padding: max(88px, 12vh) max(48px, 5vw) 0; display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; opacity: 0; will-change: transform, opacity;">
+        <div>
+          <div style="font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.6);">02 / Production Architecture</div>
+          <h2 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(34px, 4.2vw, 72px); line-height: 0.95; letter-spacing: 0.005em; color: #FFFFFF; margin: 14px 0 0;">The Cutting Room.</h2>
+        </div>
+        <div data-r="cut-ctrl" style="font-family: 'Courier New', Courier, monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.55); text-align: right; line-height: 2;">Strategy &nbsp;·&nbsp; Creative &nbsp;·&nbsp; Production<br><span style="color: rgba(255,255,255,0.4);">Overseeing every stage</span></div>
+      </div>
+
+      <div data-cut="stage" data-r="cut-pad cut-stage" style="position: relative; flex: 1; min-height: 0; margin: 3vh 0; opacity: 0; will-change: opacity;">
+        <sc-for list="{{ cutStages }}" as="c" hint-placeholder-count="5">
+          <div data-cut="panel" style="position: absolute; left: max(48px, 5vw); right: max(48px, 5vw); top: 50%; margin-top: -0.1px; max-width: 680px; opacity: 0; will-change: transform, opacity;">
+            <div style="display: flex; align-items: center; gap: 18px; font-family: 'Courier New', Courier, monospace; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.62);">
+              <span style="color: #FFFFFF;">{{ c.num }} / 05</span><span style="width: 36px; height: 1px; background: rgba(255,255,255,0.35);"></span><span>{{ c.phase }}</span>
+            </div>
+            <h3 data-r="cut-name" style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(36px, min(6vw, 10vh), 108px); line-height: 0.92; letter-spacing: 0.005em; color: #FFFFFF; margin: min(22px, 2.4vh) 0 0;">{{ c.head }}</h3>
+            <p style="font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.68); max-width: 470px; margin: min(22px, 2.4vh) 0 0; text-wrap: pretty;">{{ c.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+
+      <div data-cut="track" data-r="cut-pad cut-track" style="position: relative; flex: none; padding: 0 max(48px, 5vw) max(32px, 5vh); opacity: 0; will-change: transform, opacity;">
+        <div data-cut="final" style="display: flex; justify-content: flex-end; margin-bottom: 14px; opacity: 0;"><div data-r="cut-final" style="font-family: 'Courier New', Courier, monospace; font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: #FFFFFF;">Brand built &nbsp;·&nbsp; Campaign live</div></div>
+        <div data-r="cut-phases" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); font-family: 'Courier New', Courier, monospace; font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 18px;">
+          <div style="border-top: 1px solid rgba(255,255,255,0.14); padding-top: 10px; margin-right: 10px;">Discover</div>
+          <div style="border-top: 1px solid rgba(255,255,255,0.14); padding-top: 10px; margin-right: 10px;">Define</div>
+          <div style="grid-column: span 2; border-top: 1px solid rgba(255,255,255,0.14); padding-top: 10px; margin-right: 10px;">Make</div>
+          <div style="border-top: 1px solid rgba(255,255,255,0.14); padding-top: 10px;">Launch</div>
+        </div>
+        <div style="position: relative; height: 13px;">
+          <div style="position: absolute; left: 10%; right: 10%; top: 6px; height: 1px; background: rgba(255,255,255,0.16);"></div>
+          <div style="position: absolute; left: 10%; right: 10%; top: 6px; height: 1px;">
+            <div data-cut="fill" style="position: absolute; inset: 0; background: #FFFFFF; transform-origin: left center; transform: scaleX(0);"></div>
+            <div data-cut="head-dot" style="position: absolute; left: 0; top: 0; width: 100%; height: 0;">
+              <span style="position: absolute; left: -6px; top: -6px; width: 13px; height: 13px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 0 0 6px rgba(255,255,255,0.08);"></span>
+            </div>
+          </div>
+          <div style="position: absolute; inset: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));">
+            <sc-for list="{{ cutStages }}" as="c" hint-placeholder-count="5">
+              <div style="display: flex; justify-content: center;"><span data-cut="pip" style="width: 7px; height: 7px; margin-top: 3px; border: 1px solid rgba(255,255,255,0.4); background: #0B0B0D; transition: background 0.3s, border-color 0.3s;"></span></div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 18px;">
+          <sc-for list="{{ cutStages }}" as="c" hint-placeholder-count="5">
+            <div data-cut="node" style="text-align: center; padding: 0 8px; opacity: 0.38; transition: opacity 0.4s;">
+              <div style="font-family: 'Courier New', Courier, monospace; font-size: 10px; letter-spacing: 0.2em; color: rgba(255,255,255,0.7);">{{ c.num }}</div>
+              <div data-r="cut-node-name" style="font-size: 13px; font-weight: 700; color: #FFFFFF; margin-top: 6px; line-height: 1.35;">{{ c.name }}</div>
+              <div data-r="cut-node-tag" style="font-family: 'Courier New', Courier, monospace; font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 6px;">{{ c.tag }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+
+    </div>
+   </div>
+  </section>
+
   <section id="team" style="background: #FFFFFF;">
     <div data-r="pad" style="padding: 72px max(48px, 5vw) 40px; border-bottom: 1px solid #E2E5EC;">
       <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; color: #6B7280; margin-bottom: 14px;">The People Behind It</div>
@@ -223,7 +441,7 @@
       <sc-for list="{{ team }}" as="member" hint-placeholder-count="3">
         <div data-r="team-row" style="display: grid; grid-template-columns: 200px 1fr; align-items: center; gap: 48px; padding: 44px max(48px, 5vw); border-bottom: 1px solid #E2E5EC;">
           <div data-r="team-photo" style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; background: #0F0F0F; flex-shrink: 0;">
-            <img src="{{ member.photo }}" alt="{{ member.name }}" style="width: 100%; height: 100%; object-fit: cover; display: block; object-position: {{ member.objectPosition }};">
+            <img ref="{{ member.photoRef }}" alt="{{ member.name }}" style="width: 100%; height: 100%; object-fit: cover; display: block; object-position: {{ member.objectPosition }};">
           </div>
           <div>
             <div style="font-family: 'Times New Roman', Times, serif; font-weight: 700; font-size: clamp(26px, 2.6vw, 42px); letter-spacing: 0.005em; line-height: 1; margin-bottom: 8px;">{{ member.name }}</div>
@@ -244,7 +462,7 @@
       <div style="display: inline-block; animation: vt-scroll 38s linear infinite;">
         <sc-for list="{{ clients }}" as="client" hint-placeholder-count="18">
           <div data-r="client-logo" style="display: inline-flex; align-items: center; justify-content: center; height: 46px; margin: 0 24px; opacity: 0.75; filter: grayscale(1);">
-            <img src="{{ client.img }}" alt="{{ client.name }}" style="width: auto; height: 100%; max-width: 175px; object-fit: contain;">
+            <img ref="{{ client.imgRef }}" alt="{{ client.name }}" loading="lazy" decoding="async" style="width: auto; height: 100%; max-width: 175px; object-fit: contain;">
           </div>
         </sc-for>
       </div>
@@ -253,12 +471,13 @@
       <div style="display: inline-block; animation: vt-scroll-rev 38s linear infinite;">
         <sc-for list="{{ clientsRev }}" as="client" hint-placeholder-count="18">
           <div data-r="client-logo" style="display: inline-flex; align-items: center; justify-content: center; height: 46px; margin: 0 24px; opacity: 0.75; filter: grayscale(1);">
-            <img src="{{ client.img }}" alt="{{ client.name }}" style="width: auto; height: 100%; max-width: 175px; object-fit: contain;">
+            <img ref="{{ client.imgRef }}" alt="{{ client.name }}" loading="lazy" decoding="async" style="width: auto; height: 100%; max-width: 175px; object-fit: contain;">
           </div>
         </sc-for>
       </div>
     </div>
   </section>
+
 
   <section id="contact" style="background: #0F0F0F;">
     <div data-r="pad" style="padding: 72px max(48px, 5vw) 40px; border-bottom: 1px solid rgba(255,255,255,0.06);">
@@ -329,11 +548,11 @@
     <div onClick="{{ closeLightbox }}" style="position: fixed; inset: 0; z-index: 9999; background: rgba(15,15,15,0.94); display: flex; align-items: center; justify-content: center; padding: 4vw; cursor: zoom-out;">
       <div onClick="{{ closeLightbox }}" data-r="lb-close" style="position: absolute; top: 24px; right: 30px; width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.25); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 20px; cursor: pointer;" style-hover="border-color: rgba(255,255,255,0.7);">&#215;</div>
       <sc-if value="{{ lightboxImage }}" hint-placeholder-val="{{ false }}">
-        <img src="{{ lightboxImage }}" style="max-width: 92vw; max-height: 88vh; object-fit: contain; display: block;">
+        <img ref="{{ lbImageRef }}" alt="" style="max-width: 92vw; max-height: 88vh; object-fit: contain; display: block;">
       </sc-if>
       <sc-if value="{{ lightboxVideo }}" hint-placeholder-val="{{ false }}">
         <div onClick="{{ stopProp }}" style="display: flex; flex-direction: column; align-items: center; gap: 16px; cursor: default;">
-          <video src="{{ lightboxVideo }}" ref="{{ lbVideoRef }}" loop="" playsinline="" onClick="{{ togglePlay }}" style="max-width: 92vw; max-height: 76vh; display: block; background: #000; cursor: pointer;"></video>
+          <video ref="{{ lbVideoRef }}" loop="" playsinline="" onClick="{{ togglePlay }}" style="max-width: 92vw; max-height: 76vh; display: block; background: #000; cursor: pointer;"></video>
           <div style="display: flex; align-items: center; gap: 20px; padding: 12px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.16);">
             <div onClick="{{ togglePlay }}" title="Play / pause" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 12px; cursor: pointer; user-select: none;" style-hover="border-color: #FFFFFF;">{{ playIcon }}</div>
             <div onClick="{{ toggleMute }}" title="Mute / unmute" style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.65); cursor: pointer; user-select: none; min-width: 56px;" style-hover="color: #FFFFFF;">{{ muteLabel }}</div>
@@ -352,6 +571,52 @@
 <script type="text/x-dc" data-dc-script data-props="{&quot;formEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact form&quot;}}">
 class Component extends DCLogic {
   marqueeBase = ['Campaign Direction', 'Brand Films', 'Content Production', 'Photography & Editorial', 'Post-Production', 'Visual Storytelling'];
+
+  stageData = [
+    { num: '01', name: 'Discover', tag: 'Brief / Interrogate', body: 'Brief, kick-off, competitive teardown. We argue about what the film is actually for before anyone opens a camera case.', out: 'film' },
+    { num: '02', name: 'Develop', tag: 'Treatment Deck', body: 'Research, references, concept and treatment. One document the whole crew and the client can point at.', out: 'stills' },
+    { num: '03', name: 'Script', tag: 'Board / Shotlist', body: 'Script, storyboard, shotlist, lens plan. Every frame is decided on paper first — it is the cheapest place to change your mind.', out: 'film' },
+    { num: '04', name: 'Mobilise', tag: 'Call Sheet', body: 'Schedule, budget, casting, locations, permits, crew. Recce, tech scout, call sheet out 48 hours ahead.', out: 'stills' },
+    { num: '05', name: 'Capture', tag: 'Alexa 35 / 4.6K', body: 'Principal photography. Director, DOP and producer on the floor, data wrangled and backed up in triplicate before anyone wraps.', out: 'film' },
+    { num: '06', name: 'Assemble', tag: 'Picture Lock', body: 'Ingest, selects, offline edit, client rounds. We cut long, then cut cruel, until it earns picture lock.', out: 'stills' },
+    { num: '07', name: 'Score', tag: 'Sound / 5.1 Mix', body: 'Music, sound design, VO, dialogue clean-up and the final mix. Half of what an audience feels is what they hear.', out: 'film' },
+    { num: '08', name: 'Finish', tag: 'Grade / VFX', body: 'Conform, VFX, titles and colour grade. The look is built, not found in a preset.', out: 'stills' },
+    { num: '09', name: 'Master', tag: 'QC / Deliver', body: 'QC, versioning and delivery — broadcast, cinema, 4K master, verticals and cutdowns for every placement.', out: 'film' },
+    { num: '10', name: 'Release', tag: 'Rollout', body: 'Rollout support, platform specs, performance read-back. We stay on it after it goes live.', out: 'stills' }
+  ];
+
+  phases = [
+    { num: '01', name: 'Develop', body: 'Brief, research, references. We argue about what the film is actually for before anyone opens a case.' },
+    { num: '02', name: 'Prepare', body: 'Script, board, shotlist, schedule, crew. Every frame is decided on paper first — the cheapest place to change your mind.' },
+    { num: '03', name: 'Capture', body: 'Principal photography, data wrangled and backed up in triplicate before anyone wraps.' },
+    { num: '04', name: 'Finish', body: 'Offline, sound, grade, delivery. Nothing leaves the room until it earns the master.' }
+  ];
+
+  ctrlBase = [
+    { name: 'Creative Direction', tag: 'Director / DOP' },
+    { name: 'Production Office', tag: 'Schedule / Budget' }
+  ];
+
+  cutStages = [
+    { num: '01', name: 'Discover & Strategy', head: 'Find the real question.', phase: 'Discover', tag: 'Audit / Positioning', body: 'We study your brand, your audience and the market, then agree on the one idea everything we make has to prove.' },
+    { num: '02', name: 'Brand & Concept', head: 'Shape the idea.', phase: 'Define', tag: 'Identity / Campaign', body: 'Identity, tone of voice, campaign concepts and scripts — a clear creative platform your team can build on for years.' },
+    { num: '03', name: 'Create & Produce', head: 'Make it real.', phase: 'Make', tag: 'Film / Photo / Design', body: 'Films, photography and design assets produced by one team, so every frame, layout and line looks and sounds like you.' },
+    { num: '04', name: 'Craft & Refine', head: 'Sweat the details.', phase: 'Make', tag: 'Edit / Grade / Polish', body: 'Edit, sound, colour and design finishing — every asset tuned until it earns its place in the rollout.' },
+    { num: '05', name: 'Launch & Grow', head: 'Put it to work.', phase: 'Launch', tag: 'Rollout / Performance', body: 'Channel plans, social and performance creative, launch and reporting — then we learn from the numbers and go again.' }
+  ];
+
+  pipeBase = [
+    { name: 'Brief & Research', tag: 'Interrogate', phase: 0, cells: [1, 0, 0, 1] },
+    { name: 'Concept & Script', tag: 'Treatment / Board', phase: 1, cells: [1, 1, 0, 1] },
+    { name: 'Plan & Shoot', tag: 'Alexa 35 / 4.6K', phase: 2, cells: [1, 1, 1, 1] },
+    { name: 'Edit & Sound', tag: 'Picture Lock', phase: 3, cells: [0, 1, 1, 0] },
+    { name: 'Grade & Deliver', tag: 'Master / DCP', phase: 3, cells: [1, 0, 1, 1] }
+  ];
+
+  outputs = {
+    film: { title: 'A finished film.', body: '4K master, broadcast-safe, graded and mixed — plus every cutdown and vertical the rollout needs.', tag: 'MP4 / DCP' },
+    stills: { title: 'A stills frame.', body: 'Retouched, colour-matched campaign stills pulled from the same shoot and the same look.', tag: 'TIFF / RAW' }
+  };
 
   statsMarquee = [
     '500+ projects across brands & mediums',
@@ -384,10 +649,10 @@ class Component extends DCLogic {
   ];
 
   videoItemsBase = [
-    { slotId: 'video-reel-1', span: 5, ratio: '4/5', isVideo: true, placeholder: false, img: null, defaultSrc: 'assets/video-reel-1.mp4', tag: 'Brand Film ·', name: 'Talent Management' },
-    { slotId: 'video-reel-2', span: 7, ratio: '16/10', isVideo: true, placeholder: false, img: null, defaultSrc: 'assets/video-reel-2.mp4', tag: 'Behind The Scenes', name: 'BTS Clip' },
-    { slotId: 'video-reel-3', span: 5, ratio: '4/5', isVideo: true, placeholder: false, img: null, defaultSrc: 'assets/video-reel-3.mp4', tag: 'Social Content', name: 'Short-Form Clip' },
-    { slotId: 'video-poco-bts', span: 7, ratio: '16/10', isVideo: true, placeholder: false, img: null, defaultSrc: 'assets/video-poco-bts.mp4', tag: 'Behind The Scenes', name: 'POCO X5 Pro\nHardik Pandya BTS' }
+    { slotId: 'video-reel-1', span: 5, ratio: '4/5', isVideo: true, placeholder: false, img: null, defaultSrc: 'assets/video-reel-1.mp4', poster: 'assets/poster-video-reel-1.png', tag: 'Brand Film ·', name: 'Talent Management' },
+    { slotId: 'video-reel-2', span: 7, ratio: '16/10', isVideo: true, placeholder: false, img: null, defaultSrc: 'assets/video-reel-2.mp4', poster: 'assets/poster-video-reel-2.png', tag: 'Behind The Scenes', name: 'BTS Clip' },
+    { slotId: 'video-reel-3', span: 5, ratio: '4/5', isVideo: true, placeholder: false, img: null, defaultSrc: 'assets/video-reel-3.mp4', poster: 'assets/poster-video-reel-3.png', tag: 'Social Content', name: 'Short-Form Clip' },
+    { slotId: 'video-poco-bts', span: 7, ratio: '16/10', isVideo: true, placeholder: false, img: null, defaultSrc: 'assets/video-poco-bts.mp4', poster: 'assets/poster-video-poco-bts.png', tag: 'Behind The Scenes', name: 'POCO X5 Pro\nHardik Pandya BTS' }
   ];
 
   serviceNamesBase = ['Brand Identity', 'International Production Support', 'Brand Positioning', 'Concept Development', 'Commercials', 'Brand Films', 'Corporate Communications', 'Reels & Short Form Content', 'Behind The Scenes & Event Coverage', 'Campaign Stills', 'Catalogue & Product Photography', 'Line Production', 'Celebrity Bookings'];
@@ -413,34 +678,178 @@ class Component extends DCLogic {
     { slotId: 'team-harthika', num: '03', placeholder: 'Add Harthika portrait', photo: 'assets/team-harthika.jpeg', objectPosition: 'center 6%', name: 'Harthika Naidu', role: 'Creative producer', bio: "Part producer, part stylist, part storyteller. Unable to settle on one major in college, she studied psychology, visual communication, and performing arts, which in hindsight turned out to be the perfect advertising cocktail. Her career began on the production side of advertising, where she learned to build campaigns from the ground up, though a longstanding love of aesthetics kept pulling her toward wardrobe and styling. Over the past five years she has moved from running sets as a producer to building looks as a stylist, and often does both at once." },
   ];
 
-  state = { videoSrcs: {}, lightbox: null, lbPlaying: true, lbVolume: 0.9, lbMuted: false, formState: 'idle', formNote: '' };
+  state = { activeStage: 2, videoSrcs: {}, lightbox: null, lbPlaying: true, lbVolume: 0.9, lbMuted: true, formState: 'idle', formNote: '' };
 
   componentDidMount() {
     this._esc = (e) => { if (e.key === 'Escape') this.closeLightbox(); };
     window.addEventListener('keydown', this._esc);
     window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onScroll);
+    document.addEventListener('scroll', this._onScroll, { capture: true, passive: true });
+    this._startLoop();
     this._muteTick = setInterval(() => {
       document.querySelectorAll('video[data-marquee]').forEach(v => { if (!v.muted) { v.muted = true; v.volume = 0; } });
     }, 1000);
   }
 
-  _onScroll = () => {
+  _onScroll = () => { this._frame(); };
+
+  _startLoop() {
+    if (!this._raf) {
+      const tick = () => { if (!this._raf) return; this._raf = requestAnimationFrame(tick); this._frame(); };
+      this._raf = requestAnimationFrame(tick);
+    }
+    if (!this._watchdog) {
+      this._watchdog = setInterval(() => {
+        if (performance.now() - (this._lastTick || 0) > 180) this._frame();
+      }, 120);
+    }
+  }
+
+  _frame() {
+    this._lastTick = performance.now();
     const img = this._heroImg;
-    if (!img) return;
-    const y = window.scrollY || 0;
-    if (y > window.innerHeight * 1.3) return;
-    img.style.transform = 'translate3d(10px,' + (y * 0.05).toFixed(2) + 'px,0)';
-  };
+    if (img) {
+      const r = img.getBoundingClientRect();
+      const y = Math.max(0, -r.top);
+      if (y < window.innerHeight * 1.4) img.style.transform = 'translate3d(10px,' + (y * 0.05).toFixed(2) + 'px,0)';
+    }
+    this._camera();
+    this._pipeline();
+  }
+
+  _pipeline() {
+    const pin = this._cut;
+    if (!pin) return;
+    const vh = window.innerHeight;
+    const rect = pin.getBoundingClientRect();
+    if (rect.bottom < -200 || rect.top > vh + 200) return;
+    if (!this._cutEls) {
+      const q = (s) => pin.querySelector('[data-cut="' + s + '"]'), qa = (s) => Array.from(pin.querySelectorAll('[data-cut="' + s + '"]'));
+      this._cutEls = { intro: q('intro'), head: q('head'), stage: q('stage'), track: q('track'), fill: q('fill'), dot: q('head-dot'), final: q('final'), panels: qa('panel'), bg: qa('bgnum'), nodes: qa('node'), pips: qa('pip'), lit: -1 };
+    }
+    const E = this._cutEls;
+    const cl = (v) => v < 0 ? 0 : v > 1 ? 1 : v;
+    const ease = (v) => 1 - Math.pow(1 - v, 3);
+    const io = (v) => v < 0.5 ? 4 * v * v * v : 1 - Math.pow(-2 * v + 2, 3) / 2;
+    const p = cl(-rect.top / ((pin.offsetHeight - vh) || 1));
+    const out = io(cl((p - 0.03) / 0.1));
+    if (E.intro) { E.intro.style.opacity = (1 - out).toFixed(3); E.intro.style.transform = 'translateY(' + (-70 * out).toFixed(1) + 'px) scale(' + (1 - 0.08 * out).toFixed(4) + ')'; }
+    const inn = ease(cl((p - 0.08) / 0.08));
+    if (E.head) { E.head.style.opacity = inn.toFixed(3); E.head.style.transform = 'translateY(' + (24 * (1 - inn)).toFixed(1) + 'px)'; }
+    if (E.stage) E.stage.style.opacity = inn.toFixed(3);
+    const tin = ease(cl((p - 0.1) / 0.08));
+    if (E.track) { E.track.style.opacity = tin.toFixed(3); E.track.style.transform = 'translateY(' + (30 * (1 - tin)).toFixed(1) + 'px)'; }
+    const n = E.panels.length || 5;
+    const s = cl((p - 0.12) / 0.78) * (n - 1);
+    if (E.fill) E.fill.style.transform = 'scaleX(' + (s / (n - 1)).toFixed(4) + ')';
+    if (E.dot) E.dot.style.transform = 'translateX(' + (s / (n - 1) * 100).toFixed(3) + '%)';
+    E.panels.forEach((el, i) => {
+      const d = s - i;
+      el.style.opacity = (cl((0.5 - Math.abs(d)) / 0.16) * inn).toFixed(3);
+      el.style.transform = 'translateY(calc(-50% + ' + (-d * 110).toFixed(1) + 'px))';
+    });
+    E.bg.forEach((el, i) => {
+      const d = s - i;
+      el.style.opacity = (cl(1.2 - Math.abs(d) * 1.1) * inn).toFixed(3);
+      el.style.transform = 'translateY(' + (-d * 18).toFixed(1) + 'vh)';
+    });
+    const lit = p < 0.1 ? -1 : Math.floor(s + 0.5);
+    if (lit !== E.lit) {
+      E.lit = lit;
+      E.nodes.forEach((el, i) => { el.style.opacity = i === lit ? '1' : i < lit ? '0.72' : '0.38'; });
+      E.pips.forEach((el, i) => { el.style.background = i <= lit ? '#FFFFFF' : '#0B0B0D'; el.style.borderColor = i <= lit ? '#FFFFFF' : 'rgba(255,255,255,0.4)'; });
+    }
+    const fin = ease(cl((p - 0.86) / 0.06));
+    if (E.final) { E.final.style.opacity = fin.toFixed(3); }
+  }
+
+  _camera() {
+    const pin = this._pin;
+    if (!pin) return;
+    const vh = window.innerHeight, vw = window.innerWidth;
+    const total = pin.offsetHeight - vh;
+    const rect = pin.getBoundingClientRect();
+    const cl = (v) => v < 0 ? 0 : v > 1 ? 1 : v;
+    const ease = (v) => v < 0.5 ? 2 * v * v : 1 - Math.pow(-2 * v + 2, 2) / 2;
+    if (rect.bottom < -400 || rect.top > vh + 400) return;
+    const p = cl(-rect.top / (total || 1));
+    pin.dataset.p = p.toFixed(3);
+
+    const NAT_W = 3840, NAT_H = 2880;
+    const Q = [[1796, 256], [2438, 320], [2366, 768], [1790, 724]];
+    const SCX = 2098, SCY = 517, SCW = 610, SCH = 458;
+    const a = ease(cl(p / 0.14));
+    const t = ease(cl((p - 0.16) / 0.54));
+    const m = ease(cl((p - 0.74) / 0.16));
+    const base = Math.min(vw * 0.96, (vh * 0.9) / (NAT_H / NAT_W), 1560);
+    const f = base / NAT_W;
+    const photo = this._camPhoto;
+    const se = Math.pow(Math.max(vw / (SCW * f), vh / (SCH * f)) * 1.18, t);
+    if (photo) {
+      photo.style.width = base.toFixed(1) + 'px';
+      photo.style.transformOrigin = (SCX * f).toFixed(1) + 'px ' + (SCY * f).toFixed(1) + 'px';
+      photo.style.left = (vw / 2 - SCX * f).toFixed(1) + 'px';
+      photo.style.top = (vh / 2 - SCY * f).toFixed(1) + 'px';
+      photo.style.transform = 'scale(' + (se * (0.965 + 0.035 * a)).toFixed(4) + ')';
+      photo.style.opacity = (1 - cl((t - 0.9) / 0.1)).toFixed(3);
+    }
+
+    const grid = this._vfGrid;
+    if (grid) {
+      const k = ease(cl((t - 0.6) / 0.4));
+      const cx = vw / 2, cy = vh / 2, s = f * se * (0.965 + 0.035 * a);
+      const V = [[0, 0], [vw, 0], [vw, vh], [0, vh]];
+      const pts = Q.map((q, i) => {
+        const x = cx + (q[0] - SCX) * s, y = cy + (q[1] - SCY) * s;
+        return [x + (V[i][0] - x) * k, y + (V[i][1] - y) * k];
+      });
+      const poly = 'polygon(' + pts.map(v => v[0].toFixed(1) + 'px ' + v[1].toFixed(1) + 'px').join(', ') + ')';
+      grid.style.clipPath = poly;
+      const scr = this._vfScreen;
+      if (scr) {
+        scr.style.clipPath = poly;
+        const xs = pts.map(v => v[0]), ys = pts.map(v => v[1]);
+        const vid = scr.firstElementChild;
+        if (vid) {
+          const l = Math.min(...xs), t0 = Math.min(...ys);
+          vid.style.left = l.toFixed(1) + 'px'; vid.style.top = t0.toFixed(1) + 'px';
+          vid.style.width = (Math.max(...xs) - l).toFixed(1) + 'px'; vid.style.height = (Math.max(...ys) - t0).toFixed(1) + 'px';
+        }
+      }
+      const on = cl((p - 0.1) / 0.06);
+      grid.style.opacity = on.toFixed(3);
+      grid.style.visibility = on > 0.01 ? 'visible' : 'hidden';
+    }
+    if (this._vfGridInner) this._vfGridInner.style.transform = 'scale(' + ((1.14 - 0.14 * t) * (1 + 0.6 * m)).toFixed(3) + ')';
+    const mq = this._vfMarq;
+    if (mq) {
+      mq.style.opacity = m.toFixed(3);
+      mq.style.transform = 'scale(' + (1.22 - 0.22 * m).toFixed(4) + ')';
+      mq.style.visibility = m > 0.01 ? 'visible' : 'hidden';
+      mq.style.pointerEvents = m > 0.9 ? 'auto' : 'none';
+    }
+    if (this._camLabel) {
+      this._camLabel.style.opacity = (a * (1 - cl(t / 0.12))).toFixed(3);
+      this._camLabel.style.transform = 'translateY(' + (-22 * t).toFixed(1) + 'px)';
+    }
+    if (this._vf) this._vf.style.opacity = (cl((t - 0.74) / 0.26) * (1 - m)).toFixed(3);
+    if (this._vfTitle) this._vfTitle.style.opacity = (cl((t - 0.44) / 0.28) * (1 - m)).toFixed(3);
+  }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('resize', this._onScroll);
+    document.removeEventListener('scroll', this._onScroll, { capture: true });
+    if (this._raf) { cancelAnimationFrame(this._raf); this._raf = null; }
+    if (this._watchdog) { clearInterval(this._watchdog); this._watchdog = null; }
     window.removeEventListener('keydown', this._esc);
     clearInterval(this._muteTick);
   }
 
   openLightbox(type, src) {
     if (!src) return;
-    this.setState({ lightbox: { type, src }, lbPlaying: true, lbMuted: false });
+    this.setState({ lightbox: { type, src }, lbPlaying: true, lbMuted: true });
     document.body.style.overflow = 'hidden';
   }
 
@@ -454,22 +863,36 @@ class Component extends DCLogic {
   }
 
   _attachLbVideo(el) {
+    if (!el) return;
+    if (this._lbVideo && this._lbVideo !== el) { try { this._lbVideo.pause(); this._lbVideo.muted = true; } catch (e) {} }
     this._lbVideo = el;
-    if (!el || el._vtWired) return;
+    const lb = this.state.lightbox;
+    const src = lb && lb.type === 'video' && lb.src;
+    if (!el || !src) return;
+    if (el.getAttribute('src') !== src) el.src = src;
+    if (el._vtWired) return;
     el._vtWired = true;
     el.addEventListener('play', () => this.setState({ lbPlaying: true }));
     el.addEventListener('pause', () => this.setState({ lbPlaying: false }));
     el.addEventListener('volumechange', () => this.setState({ lbMuted: el.muted, lbVolume: el.volume }));
-    el.muted = false;
+    el.muted = true;
     el.volume = this.state.lbVolume;
+    this.setState({ lbMuted: true });
+    this._pauseOthers(el);
     const p = el.play();
-    if (p && p.catch) p.catch(() => { el.muted = true; this.setState({ lbMuted: true }); el.play().catch(() => {}); });
+    if (p && p.catch) p.catch(() => {});
+  }
+
+  _pauseOthers(keep) {
+    document.querySelectorAll('video').forEach(v => { if (v !== keep) { try { v.pause(); v.muted = true; } catch (e) {} } });
   }
 
   togglePlay(e) {
     if (e) e.stopPropagation();
     const v = this._lbVideo;
     if (!v) return;
+    this._pauseOthers(v);
+    if (v.muted) { v.muted = false; if (v.volume === 0) v.volume = 0.6; if (v.paused) v.play().catch(() => {}); return; }
     if (v.paused) { v.play().catch(() => {}); } else { v.pause(); }
   }
 
@@ -554,6 +977,9 @@ class Component extends DCLogic {
   }
 
   renderVals() {
+    this._startLoop();
+    const act = this.state.activeStage;
+    const out = this.outputs[(this.stageData[act] || this.stageData[0]).out];
     const withUniqueIds = (arr, prefix) => arr.map((w, i) => ({ ...w, slotId: w.slotId + '-' + prefix + i }));
     const wi = this.workItemsBase, vi = this.videoItemsBase;
     const mixed1 = [
@@ -566,29 +992,34 @@ class Component extends DCLogic {
       wi[8], wi[17], vi[0], wi[3], wi[14], wi[1], wi[11], vi[2],
       wi[6], wi[15], wi[9], wi[4], wi[13], wi[7]
     ];
-    const clientLogos = (arr, prefix) => arr.map((c, i) => ({ ...c, slotId: c.slotId + '-' + prefix + i }));
+    const srcRef = (url) => (el) => { if (el && url && el.getAttribute('src') !== url) el.src = url; };
+    const clientLogos = (arr, prefix) => arr.map((c, i) => ({ ...c, slotId: c.slotId + '-' + prefix + i, imgRef: srcRef(c.img) }));
     const withVideoState = (arr) => arr.map(w => w.isVideo ? {
       ...w,
+      poster: w.poster || null,
+      posterRef: srcRef(w.poster),
       videoSrc: this.state.videoSrcs[w.slotId] || w.defaultSrc,
       videoSrcMissing: !(this.state.videoSrcs[w.slotId] || w.defaultSrc),
       openMe: () => this.openLightbox('video', this.state.videoSrcs[w.slotId] || w.defaultSrc)
-    } : { ...w, openMe: () => this.openLightbox('image', w.img) });
+    } : { ...w, imgRef: srcRef(w.img), openMe: () => this.openLightbox('image', w.img) });
     const lb = this.state.lightbox;
     return {
       marqueeTags: this.marqueeBase.concat(this.marqueeBase),
       statsMarquee: this.statsMarquee.concat(this.statsMarquee.slice(0, 2)),
       workRow1: withVideoState(withUniqueIds(mixed1.concat(mixed1), 'r1')),
       workRow2: withVideoState(withUniqueIds(mixed2.concat(mixed2), 'r2')),
+      vfGrid: withVideoState(withUniqueIds(mixed1.slice(0, 15), 'vf')),
       serviceNames: this.serviceNamesBase.concat(this.serviceNamesBase),
       clients: clientLogos(this.clientsBase.concat(this.clientsBase), 'c1'),
       clientsRev: clientLogos(this.clientsBase.slice().reverse().concat(this.clientsBase.slice().reverse()), 'c2'),
-      team: this.team,
+      team: this.team.map(m => ({ ...m, photoRef: srcRef(m.photo) })),
       lightboxOpen: !!lb,
       lightboxImage: lb && lb.type === 'image' ? lb.src : null,
       lightboxVideo: lb && lb.type === 'video' ? lb.src : null,
       closeLightbox: () => this.closeLightbox(),
       stopProp: (e) => e.stopPropagation(),
       muteRef: (el) => { if (el) { el.muted = true; el.defaultMuted = true; el.volume = 0; } },
+      lbImageRef: (el) => { const src = this.state.lightbox && this.state.lightbox.type === 'image' && this.state.lightbox.src; if (el && src) el.src = src; },
       lbVideoRef: (el) => this._attachLbVideo(el),
       togglePlay: (e) => this.togglePlay(e),
       toggleMute: (e) => this.toggleMute(e),
@@ -599,6 +1030,73 @@ class Component extends DCLogic {
       volPct: (this.state.lbMuted ? 0 : Math.round(this.state.lbVolume * 100)) + '%',
       volLabel: (this.state.lbMuted ? 0 : Math.round(this.state.lbVolume * 100)) + '',
       heroImgRef: (el) => { this._heroImg = el; },
+      pinRef: (el) => { this._pin = el; },
+      pipePinRef: (el) => { this._pipePin = el; },
+      cutRef: (el) => { if (el !== this._cut) { this._cut = el; this._cutEls = null; } },
+      cutStages: this.cutStages,
+      camPhotoRef: (el) => { this._camPhoto = el; },
+      vfGridRef: (el) => { this._vfGrid = el; },
+      vfMarqRef: (el) => { this._vfMarq = el; },
+      vfScreenRef: (el) => { this._vfScreen = el; },
+      vfGridInnerRef: (el) => { this._vfGridInner = el; },
+      camBodyRef: (el) => { this._camBody = el; },
+      camLensRef: (el) => { this._camLens = el; },
+      camHandleRef: (el) => { this._camHandle = el; },
+      camEvfRef: (el) => { this._camEvf = el; },
+      camScreenRef: (el) => { this._camScreen = el; },
+      camRodsRef: (el) => { this._camRods = el; },
+      camLabelRef: (el) => { this._camLabel = el; },
+      vfRef: (el) => { this._vf = el; },
+      vfTitleRef: (el) => { this._vfTitle = el; },
+      hudTimecode: '00:04:12:18',
+      phases: this.phases.map((s, i) => ({
+        ...s,
+        isActive: (this.pipeBase[act] || this.pipeBase[0]).phase === i,
+        edge: (this.pipeBase[act] || this.pipeBase[0]).phase === i ? '#FFFFFF' : 'transparent',
+        ink: (this.pipeBase[act] || this.pipeBase[0]).phase === i ? '#FFFFFF' : 'rgba(255,255,255,0.5)',
+        select: () => this.setState({ activeStage: this.pipeBase.findIndex(n => n.phase === i) })
+      })),
+      ctrlNodes: this.ctrlBase.map(c => ({
+        ...c,
+        border: 'rgba(255,255,255,0.28)',
+        ink: 'rgba(255,255,255,0.88)'
+      })),
+      pipeNodes: this.pipeBase.map((n, i) => ({
+        ...n,
+        isActive: i === act,
+        showLink: i < this.pipeBase.length - 1,
+        linkScale: i < act ? 1 : 0,
+        showDot: i < this.pipeBase.length - 1 && (i === act || i === act - 1),
+        border: i === act ? '#FFFFFF' : 'rgba(255,255,255,0.16)',
+        bg: i === act ? 'rgba(255,255,255,0.05)' : 'transparent',
+        ink: i === act ? '#FFFFFF' : 'rgba(255,255,255,0.55)',
+        cells: n.cells.map(v => ({
+          b: i === act ? 'rgba(255,255,255,0.75)' : 'rgba(255,255,255,0.3)',
+          f: v ? (i === act ? 'rgba(255,255,255,0.75)' : 'rgba(255,255,255,0.22)') : 'transparent'
+        })),
+        select: () => this.setState({ activeStage: i })
+      })),
+      ticks: this.pipeBase.map((n, i) => ({ bg: i === act ? '#FFFFFF' : 'rgba(255,255,255,0.18)' })),
+      statusLabel: (this.pipeBase[act] || this.pipeBase[0]).name,
+      stages: this.stageData.map((s, i) => ({
+        ...s,
+        isActive: i === act,
+        ink: i === act ? '#FFFFFF' : 'rgba(255,255,255,0.55)',
+        edge: i === act ? '#FFFFFF' : 'transparent',
+        select: () => this.setState({ activeStage: i })
+      })),
+      nodes: this.stageData.map((s, i) => ({
+        ...s,
+        border: i === act ? '#FFFFFF' : 'rgba(255,255,255,0.18)',
+        bg: i === act ? 'rgba(255,255,255,0.09)' : 'rgba(255,255,255,0.02)',
+        ink: i === act ? '#FFFFFF' : 'rgba(255,255,255,0.62)',
+        glyph: i === act ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.3)',
+        select: () => this.setState({ activeStage: i })
+      })),
+      playheadPct: (act / (this.stageData.length - 1) * 100).toFixed(1) + '%',
+      outputTitle: out.title,
+      outputBody: out.body,
+      outputTag: out.tag,
       formRef: (el) => { this._formEl = el; },
       submitForm: () => this.submitForm(),
       sendLabel: this.state.formState === 'sending' ? 'Sending…' : (this.state.formState === 'sent' ? 'Sent ✓' : 'Send It Our Way →'),
