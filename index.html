@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/favicon.ico?v=2" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon-tc.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="/favicon.ico?v=3" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/vt-icon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/vt-icon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/vt-icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="assets/vt-icon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/vt-apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico?v=3">
+  <link rel="manifest" href="/site.webmanifest?v=3">
   <title>Visual Theorem | Video Production Company — Bengaluru, London &amp; Dubai</title>
   <meta name="description" content="Visual Theorem is a video production company making advertising films, corporate videos, brand campaigns and photography for brands in India, the UK and the UAE. 500+ projects for 120+ brands.">
   <meta name="keywords" content="Visual Theorem, Visual Theorem production, video production company Bangalore, ad film production London, video production Dubai, corporate video production, brand film studio, product photography">
@@ -35,6 +36,8 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which production companies in Bangalore offer corporate video services?","acceptedAnswer":{"@type":"Answer","text":"Visual Theorem is a Bengaluru-based production company offering corporate video, internal communication films, founder and brand documentaries, and event coverage, run end to end from brief through to final grade."}},{"@type":"Question","name":"Where is Visual Theorem located in Bangalore?","acceptedAnswer":{"@type":"Answer","text":"Visual Theorem works out of Bengaluru, close to Indiranagar, and produces on location across India, the United Kingdom and the Middle East."}},{"@type":"Question","name":"What does Visual Theorem produce?","acceptedAnswer":{"@type":"Answer","text":"Advertising and ad films, corporate video, brand campaign films, product and fashion photography, and full post-production including edit, sound and colour grade."}},{"@type":"Question","name":"How experienced is the team?","acceptedAnswer":{"@type":"Answer","text":"Over 500 projects delivered for more than 120 brands, with 25+ years of combined experience across direction, production and post."}}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://visualtheorem.com/#website","name":"Visual Theorem","alternateName":"VisualTheorem","url":"https://visualtheorem.com/","publisher":{"@id":"https://visualtheorem.com/#studio"}}</script>
   <link rel="preload" as="image" href="assets/web/hero-studio.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/web/alexa-35.webp">
+  <link rel="preload" as="image" href="assets/web/poster-video-reel-1.webp">
   <meta name="theme-color" content="#0F0F0F">
   <script>
     window.VT_GA_ID = 'G-XXXXXXXXXX';
@@ -52,7 +55,9 @@
     };
     try { if (localStorage.getItem('vt-consent') === 'granted') window.vtLoadGA(); } catch (e) {}
   </script>
-<script src="./support.js"></script>
+<script src="./assets/vendor/react.production.min.js"></script>
+<script src="./assets/vendor/react-dom.production.min.js"></script>
+<script src="./support.js?v=3"></script>
 </head>
 <body>
 <x-dc>
@@ -192,7 +197,7 @@
       <div style="position: sticky; top: 0; height: 100vh; overflow: hidden; background: #FFFFFF;">
 
         <div style="position: absolute; inset: 0; overflow: hidden;">
-          <img src="./assets/web/alexa-35-clean.webp" ref="{{ camPhotoRef }}" alt="ARRI Alexa 35 with CCM-1 monitor on a production rig" style="position: absolute; left: 0; top: 0; width: 1240px; will-change: transform; transform-origin: 696px 149px;">
+          <img src="./assets/web/alexa-35.webp" ref="{{ camPhotoRef }}" alt="ARRI Alexa 35 with CCM-1 monitor on a production rig" style="position: absolute; left: 0; top: 0; width: 1240px; will-change: transform; transform-origin: 696px 149px;">
         </div>
         <div ref="{{ vfScreenRef }}" data-vf-screen="1" style="position: absolute; inset: 0; background: #08080A; clip-path: inset(50% 50% 50% 50%); pointer-events: none;">
           <img src="assets/web/poster-video-reel-1.webp" alt="" style="position: absolute; left: 0; top: 0; width: 10px; height: 10px; object-fit: cover;">
